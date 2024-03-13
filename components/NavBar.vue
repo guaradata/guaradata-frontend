@@ -1,25 +1,23 @@
 <template>
-  <div class="card">
+  <div class="card fixed-top">
     <Menubar :model="items">
       <template #start>
-        <img class="w-16 p-1 mr-4 ml-4" src="~/assets/img/logos/guaradata-logo.png">
+        <NuxtLink to="/">
+          <img class="w-16 p-1 mr-4 ml-4" src="~/assets/img/logos/guaradata-logo.png">
+        </NuxtLink>
       </template>
       <template #item="{ item, props, hasSubmenu, root }">
         <a v-ripple class="flex align-items-center" v-bind="props.action">
-          <span v-if="item.label !== 'Contato'" :class="item.icon" />
-          <span v-if="item.label === 'Contato'" class="p-2"><Button label="Contato" severity="success" /></span>
-          <span v-if="item.label !== 'Contato'" class="ml-2">{{ item.label }}</span>
+          <span :class="item.icon" />
+          <span class="ml-2">{{ item.label }}</span>
           <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
-          <span v-if="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{{
-      item.shortcut }}</span>
           <i v-if="hasSubmenu"
             :class="['pi pi-angle-down', { 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]" />
         </a>
       </template>
       <template #end>
         <div class="flex align-items-center gap-1">
-          <InputText placeholder="Search" type="text" class="w-8rem sm:w-auto" />
-          <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
+          <Button label="Contato" severity="success" class="mr-4" />
         </div>
       </template>
     </Menubar>
@@ -35,6 +33,10 @@ const items = ref([
     icon: 'pi pi-home'
   },
   {
+    label: 'Sobre',
+    icon: 'pi pi-check-circle'
+  },
+  {
     label: 'Blog',
     icon: 'pi pi-book'
   },
@@ -43,25 +45,22 @@ const items = ref([
     icon: 'pi pi-box',
     items: [
       {
-        label: 'Core',
-        icon: 'pi pi-bolt',
-        shortcut: '⌘+S'
+        label: 'Engenharia de Dados',
+        icon: 'pi pi-bolt'
       },
       {
-        label: 'Blocks',
-        icon: 'pi pi-server',
-        shortcut: '⌘+B'
+        label: 'Ciência de dados',
+        icon: 'pi pi-server'
       },
       {
-        label: 'UI Kit',
-        icon: 'pi pi-pencil',
-        shortcut: '⌘+U'
+        label: 'Frontend',
+        icon: 'pi pi-pencil'
       },
       {
         separator: true
       },
       {
-        label: 'Templates',
+        label: 'Outros',
         icon: 'pi pi-palette',
         items: [
           {
@@ -77,14 +76,6 @@ const items = ref([
         ]
       }
     ]
-  },
-  {
-    label: 'Sobre',
-    icon: 'pi pi-book'
-  },
-  {
-    label: 'Contato',
-    icon: 'pi pi-envelope'
   }
 ])
 </script>

@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       inputStyle: 'filled'
     }
   },
-  css: ['primevue/resources/themes/aura-light-green/theme.css', 'primeicons/primeicons.css', 'assets/css/base.css'],
+  css: ['primevue/resources/themes/aura-light-green/theme.css', 'primeicons/primeicons.css', 'assets/css/base.css', '@fortawesome/fontawesome-svg-core/styles.css'],
   tailwindcss: {
     config: {
       content: [
