@@ -5,6 +5,15 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-primevue'
   ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/_colors.scss" as *;'
+        }
+      }
+    }
+  },
   primevue: {
     // cssLayerOrder: 'reset,primevue',
     // cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities',
@@ -15,7 +24,7 @@ export default defineNuxtConfig({
       inputStyle: 'filled'
     }
   },
-  css: ['primevue/resources/themes/aura-light-green/theme.css', 'primeicons/primeicons.css', 'assets/css/base.css', '@fortawesome/fontawesome-svg-core/styles.css'],
+  css: ['primevue/resources/themes/aura-light-green/theme.css', 'primeicons/primeicons.css', '~/assets/css/base.css', '~/assets/scss/main.scss', '@fortawesome/fontawesome-svg-core/styles.css'],
   tailwindcss: {
     config: {
       content: [

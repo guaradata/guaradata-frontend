@@ -3,13 +3,20 @@
     <Menubar :model="items">
       <template #start>
         <NuxtLink to="/">
-          <img class="w-16 p-1 mr-4 ml-4" src="~/assets/img/logos/guaradata-logo.png">
+          <div class="brand mb-0 flex flex-col items-center justify-center">
+            <NuxtLink to="/">
+              <img class="w-12" src="~/assets/img/logos/guaradata-logo.png">
+            </NuxtLink>
+            <!-- <h1 class="text-white font-bold text-xl mt-0 p-0">
+              Guaradata
+            </h1> -->
+          </div>
         </NuxtLink>
       </template>
       <template #item="{ item, props, hasSubmenu, root }">
         <a v-ripple class="flex align-items-center" v-bind="props.action">
-          <span :class="item.icon" />
-          <span class="ml-2">{{ item.label }}</span>
+          <span class="font-bold" :class="item.icon" />
+          <span class="ml-2 font-bold text-xl">{{ item.label }}</span>
           <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
           <i v-if="hasSubmenu"
             :class="['pi pi-angle-down', { 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]" />
@@ -17,7 +24,7 @@
       </template>
       <template #end>
         <div class="flex align-items-center gap-1">
-          <Button label="Contato" severity="success" class="mr-4" />
+          <Button label="Contato" class="btn mr-4" />
         </div>
       </template>
     </Menubar>
@@ -79,3 +86,14 @@ const items = ref([
   }
 ])
 </script>
+<style lang="scss" scoped>
+.brand {
+  padding: 5px;
+}
+
+.btn {
+  background-color: $contact-color;
+  border: none;
+  color: black;
+}
+</style>
