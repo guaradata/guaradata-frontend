@@ -5,7 +5,7 @@
       <NavBar />
     </div>
     <!--Body-->
-    <div class="wrapper w-full px-6">
+    <div class="wrapper w-full px-6 mt-24 mb-6">
       <NuxtPage />
     </div>
     <!--Footer-->

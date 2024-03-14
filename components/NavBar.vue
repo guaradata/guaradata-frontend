@@ -1,12 +1,10 @@
 <template>
-  <div class="card fixed-top">
+  <div class="card fixed top-0 w-full">
     <Menubar :model="items">
       <template #start>
         <NuxtLink to="/">
           <div class="brand mb-0 flex flex-col items-center justify-center">
-            <NuxtLink to="/">
-              <img class="w-12" src="~/assets/img/logos/guaradata-logo.png">
-            </NuxtLink>
+            <span><img class="w-12" src="~/assets/img/logos/guaradata-logo.png"></span>
             <!-- <h1 class="text-white font-bold text-xl mt-0 p-0">
               Guaradata
             </h1> -->

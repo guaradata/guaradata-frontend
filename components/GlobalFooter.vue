@@ -10,6 +10,16 @@
             Guaradata
           </h2>
         </div>
+        <section class="flex justify-center p-1">
+          <div alt="Redes Sociais" class="social-icons text-white">
+            <NuxtLink to="/" target="_blank" alt="Ir para Instagram" class="me-4">
+              <font-awesome-icon icon="fab fa-linkedin" />
+            </NuxtLink>
+            <NuxtLink to="https://github.com/guaradata" alt="Ir para Instagram" class="me-4">
+              <font-awesome-icon icon="fab fa-github" />
+            </NuxtLink>
+          </div>
+        </section>
       </div>
       <div class="flex flex-col justify-center w-full md:w-1/4 px-4">
         <div class="mb-4">
@@ -47,10 +57,9 @@
           <path
             d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
         </svg><!-- --> <!-- --> by <!-- --> <!-- -->
-        <a class="text-reset m-1" target="_blank" rel="nofollow" href="https://github.com/guaradata">Guaradata
-          Group</a>
+        <a class="text-reset m-1" target="_blank" rel="nofollow" href="https://github.com/guaradata">Guaradata</a>
         <p class="m-1">
-          2024 @ v0.0.1
+          2024
         </p>
       </div>
     </div>
@@ -58,7 +67,8 @@
 </template>
 <style lang="scss" scoped>
 .footer {
-  background: linear-gradient(180deg, $global-background-light 30%, $brand 200%);
+  //background: linear-gradient(180deg, $global-background-light 30%, $brand 200%);
+  background: $global-background;
 }
 
 .divider {

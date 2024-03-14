@@ -14,6 +14,9 @@ div {
 }
 
 :root {
+  /*MenuBar*/
+  --surface-navbar: 0 0 0;
+  --surface-1250: 219 152 44;
   --primary-50: 236 253 245;
   --primary-100: 209 250 229;
   --primary-200: 167 243 208;
