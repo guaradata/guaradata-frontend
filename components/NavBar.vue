@@ -1,5 +1,5 @@
 <template>
-  <div class="card fixed top-0 w-full">
+  <div class="card top-0 w-full">
     <Menubar :model="items">
       <template #start>
         <NuxtLink to="/">
@@ -12,17 +12,19 @@
         </NuxtLink>
       </template>
       <template #item="{ item, props, hasSubmenu, root }">
-        <a v-ripple class="flex align-items-center" v-bind="props.action">
+        <NuxtLink v-ripple :to="item.route" class="flex align-items-center" v-bind="props.action">
           <span class="font-bold" :class="item.icon" />
           <span class="ml-2 font-bold text-xl">{{ item.label }}</span>
           <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
           <i v-if="hasSubmenu"
             :class="['pi pi-angle-down', { 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]" />
-        </a>
+        </NuxtLink>
       </template>
       <template #end>
         <div class="flex align-items-center gap-1">
-          <Button label="Contato" class="btn mr-4" />
+          <NuxtLink to="/contact">
+            <Button label="Contato" class="btn mr-4" />
+          </NuxtLink>
         </div>
       </template>
     </Menubar>
@@ -35,15 +37,18 @@ import { ref } from 'vue'
 const items = ref([
   {
     label: 'Home',
-    icon: 'pi pi-home'
+    icon: 'pi pi-home',
+    route: '/'
   },
   {
     label: 'Sobre',
-    icon: 'pi pi-check-circle'
+    icon: 'pi pi-check-circle',
+    route: '/about'
   },
   {
     label: 'Blog',
-    icon: 'pi pi-book'
+    icon: 'pi pi-book',
+    route: '/blog'
   },
   {
     label: 'Projetos',
@@ -51,32 +56,30 @@ const items = ref([
     items: [
       {
         label: 'Engenharia de Dados',
-        icon: 'pi pi-bolt'
+        icon: 'pi pi-cog',
+        route: '/data-engineering'
       },
       {
         label: 'Ciência de dados',
-        icon: 'pi pi-server'
-      },
-      {
-        label: 'Frontend',
-        icon: 'pi pi-pencil'
+        icon: 'pi pi-chart-bar',
+        route: '/data-science'
       },
       {
         separator: true
       },
       {
         label: 'Outros',
-        icon: 'pi pi-palette',
+        icon: 'pi pi-bolt',
         items: [
           {
-            label: 'Apollo',
+            label: 'Frontend',
             icon: 'pi pi-palette',
-            badge: 2
+            route: '/frontend'
           },
           {
-            label: 'Ultima',
-            icon: 'pi pi-palette',
-            badge: 3
+            label: 'Backend',
+            icon: 'pi pi-server',
+            route: '/backend'
           }
         ]
       }

@@ -1,12 +1,16 @@
 <template>
   <div id="app" class="w-full">
-    <!--Menu-->
-    <div class="w-full">
+    <h1 class="clipped">
+      Guaradata
+    </h1>
+    <div class="navbar w-full">
       <NavBar />
     </div>
-    <!--Body-->
-    <div class="wrapper w-full px-6 mt-24 mb-6">
-      <NuxtPage />
+    <div class="wrapper w-full">
+      <!--Banner-->
+      <GlobalBanner v-if="$route.path === '/'" />
+      <!--Body-->
+      <NuxtPage class="w-full px-6 mt-5 mb-6" />
     </div>
     <!--Footer-->
     <div class="footer w-full">
@@ -14,6 +18,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+
+</script>
+
 <style scoped>
 #app {
   display: flex;
@@ -21,16 +30,18 @@
   min-height: 100vh;
 }
 
-.container-fluid {
-  margin-top: 110px;
-  margin-bottom: 20px;
+.navbar {
+  position: fixed;
+  z-index: 999;
 }
 
 .wrapper {
   flex: 1;
+  margin-top: 4.9em;
 }
 
 .footer {
   margin-top: auto;
+  z-index: 998;
 }
 </style>
