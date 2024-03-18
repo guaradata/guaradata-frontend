@@ -12,10 +12,10 @@
         </div>
         <section class="flex flex-col justify-center items-center justify-center px-4">
           <div alt="Redes Sociais" class="social-icons text-white">
-            <NuxtLink to="/" target="_blank" alt="Ir para Instagram" class="me-4">
+            <NuxtLink to="/" target="_blank" alt="Ir para Instagram" class="m-3">
               <font-awesome-icon icon="fab fa-linkedin" class="text-2xl" />
             </NuxtLink>
-            <NuxtLink to="https://github.com/guaradata" alt="Ir para Instagram" class="me-4">
+            <NuxtLink to="https://github.com/guaradata" alt="Ir para Instagram" class="m-3">
               <font-awesome-icon icon="fab fa-github" class="text-2xl" />
             </NuxtLink>
           </div>
