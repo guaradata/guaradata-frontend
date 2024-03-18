@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       '@fortawesome/vue-fontawesome'
     ]
   },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue', "@nuxt/image"],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue', '@nuxt/image'],
   vite: {
     css: {
       preprocessorOptions: {

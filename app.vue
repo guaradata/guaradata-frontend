@@ -19,8 +19,15 @@
   </div>
 </template>
 
-<script setup>
-
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Guaradata',
+  ogTitle: 'Guaradata',
+  description: 'This is Guaradata, let me tell you all about it.',
+  ogDescription: 'This is Guaradata, let me tell you all about it.',
+  ogImage: 'https://example.com/image.png',
+  twitterCard: 'summary_large_image'
+})
 </script>
 
 <style scoped>
@@ -37,7 +44,7 @@
 
 .wrapper {
   flex: 1;
-  margin-top: 4.9em;
+  margin-top: 6.5em;
 }
 
 .footer {
