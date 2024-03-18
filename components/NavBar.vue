@@ -3,14 +3,14 @@
     <Menubar :model="items">
       <template #start>
         <NuxtLink to="/">
-          <div class="brand mb-0 inline-block flex flex-col items-center justify-center p-0">
+          <div class="brand mb-0 inline-block flex items-center justify-center p-0">
             <span><img class="w-14 p-0.5" src="~/assets/img/logos/guaradata-logo-2.png"></span>
             <!-- <h1 class="font-brand text-white font-bold text-2xl mt-0 p-0">
               guaradata
             </h1> -->
-            <h2 class="bg-white p-0.5 rounded text-black font-bold text-xl font-brand mt-0">
+            <!-- <h2 class="bg-white p-0.5 rounded text-black font-bold text-xl font-brand mt-0">
               guara<span class="font-brand-highlight">data</span>
-            </h2>
+            </h2> -->
           </div>
         </NuxtLink>
       </template>
