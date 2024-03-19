@@ -45,7 +45,7 @@ const items = ref([
   },
   {
     label: 'Sobre',
-    icon: 'pi pi-check-circle',
+    icon: 'pi pi-flag',
     route: '/about'
   },
   {
@@ -66,9 +66,6 @@ const items = ref([
         label: 'Ciência de dados',
         icon: 'pi pi-chart-bar',
         route: '/data-science'
-      },
-      {
-        separator: true
       },
       {
         label: 'Outros',
