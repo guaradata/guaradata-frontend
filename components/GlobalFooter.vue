@@ -4,18 +4,18 @@
       <div class="flex flex-col justify-center items-center w-full md:w-1/3 px-4">
         <div class="mb-4 flex flex-col items-center justify-center">
           <NuxtLink to="/">
-            <img class="w-28" src="~/assets/img/logos/guaradata-logo-1.png">
+            <img class="w-28" src="~/assets/img/logos/guaradata-logo-2.png">
           </NuxtLink>
           <h2 class="bg-white p-1 rounded text-black font-bold text-3xl mt-2 font-brand">
             guara<span class="font-brand-highlight">data</span>
           </h2>
         </div>
-        <section class="flex flex-col justify-center items-center justify-center px-4">
+        <section class="flex flex-col justify-center items-center justify-center">
           <div alt="Redes Sociais" class="social-icons text-white">
-            <NuxtLink to="/" target="_blank" alt="Ir para Instagram" class="me-4">
+            <NuxtLink to="/" target="_blank" alt="Ir para Linkedin" class="m-2">
               <font-awesome-icon icon="fab fa-linkedin" class="text-2xl" />
             </NuxtLink>
-            <NuxtLink to="https://github.com/guaradata" alt="Ir para Instagram" class="me-4">
+            <NuxtLink to="https://github.com/guaradata" alt="Ir para Github" class="m-2">
               <font-awesome-icon icon="fab fa-github" class="text-2xl" />
             </NuxtLink>
           </div>
