@@ -8,9 +8,9 @@
     </div>
     <div class="wrapper w-full">
       <!--Banner-->
-      <GlobalBanner v-if="$route.path === '/'" />
+      <!-- <GlobalBanner v-if="$route.path === '/'" /> -->
       <!--Body-->
-      <NuxtPage class="w-full px-6 mt-5 mb-6" />
+      <NuxtPage class="w-full" />
     </div>
     <!--Footer-->
     <div class="footer w-full">

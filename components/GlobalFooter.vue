@@ -27,9 +27,9 @@
             Projeto
           </h2>
           <ul>
-            <li><a href="#" class="text-gray-400 hover:text-white">Link 1</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Link 2</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Link 3</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Sobre o projeto</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Tecnologias frontend</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Tecnologias backend</a></li>
           </ul>
         </div>
       </div>
@@ -39,9 +39,9 @@
             Ajuda
           </h2>
           <ul>
-            <li><a href="#" class="text-gray-400 hover:text-white">Link 1</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Link 2</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Link 3</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Privacidade</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Problemas no site</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Solicite ajuda</a></li>
           </ul>
         </div>
       </div>

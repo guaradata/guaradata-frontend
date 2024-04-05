@@ -24,11 +24,13 @@
         </NuxtLink>
       </template>
       <template #end>
-        <div class="flex align-items-center gap-1">
-          <NuxtLink to="/contact">
-            <Button label="Contato" class="btn mr-4" />
-          </NuxtLink>
-        </div>
+        <Button icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-contact m-2" rounded>
+          <span class="font-bold">
+            <NuxtLink to="/contact" class="flex justify-center items-center">
+              Contato
+            </NuxtLink>
+          </span>
+        </Button>
       </template>
     </Menubar>
   </div>
@@ -92,9 +94,14 @@ const items = ref([
   padding: 5px;
 }
 
-.btn {
+.btn-contact {
   background-color: $contact-color;
   border: none;
+  color: black;
+}
+
+.btn-contact:hover {
+  background-color: white;
   color: black;
 }
 </style>
