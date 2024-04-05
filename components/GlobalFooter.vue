@@ -4,7 +4,7 @@
       <div class="flex flex-col justify-center items-center w-full md:w-1/3 px-4">
         <div class="mb-4 flex flex-col items-center justify-center">
           <NuxtLink to="/">
-            <img class="w-28" src="~/assets/img/logos/guaradata-logo-2.png">
+            <img class="w-28" src="~/assets/img/logos/guaradata-logo-2.svg">
           </NuxtLink>
           <h2 class="bg-white p-1 rounded text-black font-bold text-3xl mt-2 font-brand">
             guara<span class="font-brand-highlight">data</span>
