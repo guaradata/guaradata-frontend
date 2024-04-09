@@ -24,7 +24,7 @@
         </NuxtLink>
       </template>
       <template #end>
-        <Button icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-contact m-2" rounded>
+        <Button severity="danger" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-contact m-2" rounded>
           <span class="font-bold">
             <NuxtLink to="/contact" class="flex justify-center items-center">
               Contato

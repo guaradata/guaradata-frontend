@@ -1,14 +1,14 @@
 <template>
   <NuxtLink to="/blog" class="flex justify-center items-center">
-    <Card style="width: 20rem; overflow: hidden" class="m-2">
+    <Card style="overflow: hidden" class="card m-2">
       <template #header>
         <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png">
       </template>
       <template #title>
-        Advanced Card
+        Blog content
       </template>
       <template #subtitle>
-        Card subtitle
+        Blog content subtitle
       </template>
       <template #content>
         <p class="m-0">
@@ -19,10 +19,14 @@
         </p>
       </template>
       <template #footer>
-        <div class="flex gap-3 mt-1">
-          <Button label="Cancel" severity="secondary" outlined class="w-full" />
-          <Button label="Save" class="w-full" />
-        </div>
+        <NuxtLink to="/blog" class="flex justify-center items-center">
+          <Button severity="null" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-go-blog m-1" rounded>
+            <span class="font-bold flex justify-center items-center">
+              Ler conteúdo
+              <i class="icon pi pi-spin pi-cog ml-2" style="font-size: 1rem" />
+            </span>
+          </Button>
+        </NuxtLink>
       </template>
     </Card>
   </NuxtLink>
@@ -30,3 +34,23 @@
 
 <script setup>
 </script>
+<style lang="scss" scoped>
+.card {
+  width: 25em;
+}
+
+.btn-go-blog {
+  border: solid 2px;
+}
+
+.btn-go-blog:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 465px) {
+  .card {
+    width: 20em;
+  }
+}
+</style>

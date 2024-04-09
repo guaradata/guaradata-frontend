@@ -10,22 +10,22 @@
             </h1>
           </div>
           <div class="flex justify-center mt-2">
-            <Button icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-1" rounded>
-              <span class="font-bold">
-                <NuxtLink to="/blog" class="flex justify-center items-center">
+            <NuxtLink to="/blog" class="flex justify-center items-center">
+              <Button severity="danger" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-1" rounded>
+                <span class="font-bold flex justify-center items-center">
                   Visitar o blog
-                  <i class="pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
-                </NuxtLink>
-              </span>
-            </Button>
-            <Button icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-1" rounded>
-              <span class="font-bold">
-                <NuxtLink to="/contact" class="flex justify-center items-center">
+                  <i class="icon pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
+                </span>
+              </Button>
+            </NuxtLink>
+            <NuxtLink to="/contact" class="flex justify-center items-center" rel="noopener">
+              <Button severity="danger" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-1" rounded>
+                <span class="font-bold flex justify-center items-center">
                   Entre em contato
                   <i class="pi pi-envelope ml-2" style="font-size: 1rem" />
-                </NuxtLink>
-              </span>
-            </Button>
+                </span>
+              </Button>
+            </NuxtLink>
           </div>
         </div>
         <div class="img-container">
@@ -33,8 +33,12 @@
         </div>
       </div>
     </div>
-    <div class="second-section bg-gray-400 p-5">
+    <div class="second-section">
       <div class="cards-blog-home">
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
         <BlogCard />
         <BlogCard />
         <BlogCard />
@@ -73,6 +77,12 @@ img {
 .btn-blog:hover {
   background-color: white;
   color: black;
+  border: none;
+}
+
+.btn-blog:hover .icon {
+  transition: transform 0.25s ease-in-out;
+  transform: rotate(45deg);
 }
 
 .cards-blog-home {
@@ -80,7 +90,6 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  width: 100%;
 }
 
 @media (max-width: 1500px) {
@@ -117,7 +126,7 @@ img {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 910px) {
   .first-section {
     background-image: linear-gradient(to right, rgb(255, 255, 255), #DB7E2C 65%, $global-background-soft);
   }

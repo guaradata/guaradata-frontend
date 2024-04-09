@@ -21,7 +21,7 @@ export default {
       typeValue: '',
       typeStatus: false,
       displayTextArray: ['concisas.', 'que geram valor.', 'escaláveis.'],
-      typingSpeed: 100,
+      typingSpeed: 35,
       erasingSpeed: 50,
       newTextDelay: 2000,
       displayTextArrayIndex: 0,

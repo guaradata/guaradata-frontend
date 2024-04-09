@@ -21,7 +21,7 @@
           </div>
         </section>
       </div>
-      <div class="flex flex-col justify-center w-full md:w-1/4">
+      <div class="second-section flex flex-col justify-center w-full md:w-1/4">
         <div class="mb-4">
           <h2 class="text-white text-lg mb-4 font-bold">
             Projeto
@@ -69,6 +69,7 @@
 .footer {
   //background: linear-gradient(180deg, $global-background-light 30%, $brand 200%);
   background: $global-background;
+  height: auto;
 }
 
 .divider {
@@ -91,5 +92,18 @@
   transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   flex-shrink: 0;
   user-select: none;
+}
+
+@media (max-width: 730px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .second-section {
+    margin-top: 2em;
+  }
 }
 </style>
