@@ -1,10 +1,10 @@
 <template>
   <div class="card top-0 w-full">
-    <Menubar :model="items">
+    <Menubar :model="items" class="menu">
       <template #start>
         <NuxtLink to="/">
-          <div class="brand mb-0 inline-block flex items-center justify-center p-0">
-            <span><img class="w-14 p-0.5" src="~/assets/img/logos/guaradata-logo-1.svg"></span>
+          <div class="brand inline-block flex items-center justify-center p-0">
+            <span><img class="w-14" src="~/assets/img/logos/guaradata-logo-1.svg"></span>
             <!-- <h1 class="font-brand text-white font-bold text-2xl mt-0 p-0">
               guaradata
             </h1> -->
@@ -89,6 +89,7 @@ const items = ref([
   }
 ])
 </script>
+
 <style lang="scss" scoped>
 .brand {
   padding: 5px;

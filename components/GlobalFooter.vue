@@ -21,7 +21,7 @@
           </div>
         </section>
       </div>
-      <div class="flex flex-col justify-center w-full md:w-1/4 px-4">
+      <div class="flex flex-col justify-center w-full md:w-1/4">
         <div class="mb-4">
           <h2 class="text-white text-lg mb-4 font-bold">
             Projeto
@@ -33,7 +33,7 @@
           </ul>
         </div>
       </div>
-      <div class="flex flex-col justify-center w-full md:w-1/4 px-4">
+      <div class="flex flex-col justify-center w-full md:w-1/4">
         <div class="mb-4">
           <h2 class="text-white text-lg mb-4 font-bold">
             Ajuda

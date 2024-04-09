@@ -5,12 +5,12 @@
         <div class="typed-text-section w-full pl-48 mt-32">
           <TypedText />
           <div class="text-center">
-            <h1 class="text-gray-100 font-bold text-xl m-5 bg-black p-3 rounded inline-block">
+            <h1 class="text-important font-bold text-2xl mt-5 p-3 rounded inline-block">
               Ajudamos você a criar soluções na área de dados
             </h1>
           </div>
           <div class="flex justify-center mt-2">
-            <Button icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-2" rounded>
+            <Button icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-1" rounded>
               <span class="font-bold">
                 <NuxtLink to="/blog" class="flex justify-center items-center">
                   Visitar o blog
@@ -18,7 +18,7 @@
                 </NuxtLink>
               </span>
             </Button>
-            <Button icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-2" rounded>
+            <Button icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-1" rounded>
               <span class="font-bold">
                 <NuxtLink to="/contact" class="flex justify-center items-center">
                   Entre em contato
@@ -33,8 +33,13 @@
         </div>
       </div>
     </div>
-    <div class="second-section">
-      Home
+    <div class="second-section bg-gray-400 p-5">
+      <div class="cards-blog-home">
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+      </div>
     </div>
   </div>
 </template>
@@ -68,6 +73,14 @@ img {
 .btn-blog:hover {
   background-color: white;
   color: black;
+}
+
+.cards-blog-home {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
 }
 
 @media (max-width: 1500px) {
@@ -105,6 +118,10 @@ img {
 }
 
 @media (max-width: 900px) {
+  .first-section {
+    background-image: linear-gradient(to right, rgb(255, 255, 255), #DB7E2C 65%, $global-background-soft);
+  }
+
   img {
     transform: translateY(65%) translateX(40%);
   }
@@ -122,7 +139,7 @@ img {
   }
 }
 
-@media (max-width: 585px) {
+@media (max-width: 685px) {
 
   .typed-image-section {
     display: flex;
@@ -130,7 +147,7 @@ img {
     align-items: center;
   }
 
-  .img-container img {
+  .img-container {
     display: none;
   }
 }
