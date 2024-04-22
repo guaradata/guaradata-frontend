@@ -6,7 +6,7 @@
         Guara<span class="font-brand-highlight">data</span>
       </h1>
       <p class="font-bold text-lg">
-        O projeto nasceu
+        O projeto nasceu no começo de 2024 como uma idea de compartilhar conteúdos relacionados à dados.
       </p>
     </div>
     <div class="m-4 flex justify-center">
@@ -20,14 +20,14 @@
         <div class="cards-blog-home">
           <UserCard v-for="item in creators" :key="item.name" :name="item.name" :img_url="item.img_url"
             :url_profile="item.url_profile" :subtitle="item.subtitle" :github_url="item.github_url"
-            :linkedin_url="item.linkedin_url" />
+            :linkedin_url="item.linkedin_url" :about_me="item.about_me" :resume_id="item.resume_id" />
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-const creators = [{ name: 'Ivan Pinheiro', img_url: 'https://avatars.githubusercontent.com/u/85149918', url_profile: 'https://www.linkedin.com/in/ivanpinheiro/', subtitle: 'Data Engineer | Full Stack', github_url: 'https://github.com/ivpinheiro', linkedin_url: 'https://www.linkedin.com/in/ivanpinheiro/' }, { name: 'Douglas Souza', img_url: 'https://avatars.githubusercontent.com/u/91169043', url_profile: 'https://www.linkedin.com/in/douglassudre/', subtitle: 'Data Scientist | Statistical', github_url: 'https://github.com/DSudre', linkedin_url: 'https://www.linkedin.com/in/douglassudre' }]
+const creators = [{ name: 'Ivan Pinheiro', img_url: 'https://avatars.githubusercontent.com/u/85149918', url_profile: 'https://www.linkedin.com/in/ivanpinheiro/', subtitle: 'Data Engineer | Full Stack', github_url: 'https://github.com/ivpinheiro', linkedin_url: 'https://www.linkedin.com/in/ivanpinheiro/', about_me: 'Engenheiro de Analytics na Hagens, uma empresa líder em soluções de Martech. Com mais de dois anos de experiência em Analytics Digital, Rastreamento Web e integração de dados utilizando ferramentas como Airflow, Mage, PySpark e Google Cloud.', resume_id: 'ivan-pinheiro' }, { name: 'Douglas Souza', img_url: 'https://avatars.githubusercontent.com/u/91169043', url_profile: 'https://www.linkedin.com/in/douglassudre/', subtitle: 'Data Scientist | Statistical', github_url: 'https://github.com/DSudre', linkedin_url: 'https://www.linkedin.com/in/douglassudre', about_me: '', resume_id: 'douglas-souza' }]
 // async function state() {
 //   return await useFetch('https://api.github.com/repos/ivpinheiro/artesania/contributors')
 // }

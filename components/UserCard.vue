@@ -2,7 +2,7 @@
   <Card style="overflow: hidden" class="card m-8 rounded">
     <template #header>
       <div class="flex justify-center m-8">
-        <img :src="props.img_url" class="rounded-full size-48" alt="">
+        <img :src="props.img_url" class="img-profile rounded-full size-48" alt="">
       </div>
     </template>
     <template #title>
@@ -13,15 +13,12 @@
     </template>
     <template #content>
       <p class="m-0">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-        deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-        neque
-        quas!
+        {{ props.about_me }}
       </p>
     </template>
     <template #footer>
       <div class="flex justify-center gap-3 mt-1">
-        <NuxtLink to="/contact" class="flex justify-center items-center">
+        <NuxtLink :to="`resumes/${props.resume_id}`" class="flex justify-center items-center">
           <Button severity="secondary" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-profile m-1"
             rounded>
             <span class="font-bold flex justify-center items-center">
@@ -44,7 +41,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['name', 'img_url', 'url_profile', 'subtitle', 'github_url', 'linkedin_url'])
+const props = defineProps(['name', 'img_url', 'url_profile', 'subtitle', 'github_url', 'linkedin_url', 'about_me', 'resume_id'])
 </script>
 <style lang="scss" scoped>
 .card {
@@ -66,6 +63,11 @@ const props = defineProps(['name', 'img_url', 'url_profile', 'subtitle', 'github
 @media (max-width: 390px) {
   .card {
     width: 15em;
+  }
+
+  .img-profile {
+    width: 10em;
+    height: auto;
   }
 }
 
