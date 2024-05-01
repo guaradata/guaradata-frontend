@@ -145,10 +145,7 @@
                   <p class="para">
                     Durante meu estágio na área de Tags e Rastreamento, tive a oportunidade de desenvolver soluções para
                     coletar dados relevantes do Front-end de sites. Atuei na criação de Tags para captura e envio de
-                    informações para as Mídias de interesse. Além disso, realizei tarefas de manutenção em sites,
-                    landing pages e plataformas de E-commerce, utilizando ferramentas de Desenvolvimento Web. Também
-                    participei ativamente na estruturação de dados para a elaboração de painéis no Data Studio e Power
-                    BI, contribuindo assim para o Business Intelligence.
+                    informações para as Mídias de interesse.
                   </p>
                 </div>
               </div>
