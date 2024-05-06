@@ -19,14 +19,14 @@
         </p>
       </template>
       <template #footer>
-        <NuxtLink to="/blog" class="flex justify-center items-center">
+        <div class="flex justify-center items-center">
           <Button severity="null" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-go-blog m-1" rounded>
             <span class="font-bold flex justify-center items-center">
               Ler conteúdo
               <i class="icon pi pi-spin pi-cog ml-2" style="font-size: 1rem" />
             </span>
           </Button>
-        </NuxtLink>
+        </div>
       </template>
     </Card>
   </NuxtLink>

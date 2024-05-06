@@ -54,39 +54,39 @@ const items = ref([
     label: 'Blog',
     icon: 'pi pi-book',
     route: '/blog'
-  },
-  {
-    label: 'Projetos',
-    icon: 'pi pi-box',
-    items: [
-      {
-        label: 'Engenharia de Dados',
-        icon: 'pi pi-cog',
-        route: '/data-engineering'
-      },
-      {
-        label: 'Ciência de dados',
-        icon: 'pi pi-chart-bar',
-        route: '/data-science'
-      },
-      {
-        label: 'Outros',
-        icon: 'pi pi-bolt',
-        items: [
-          {
-            label: 'Frontend',
-            icon: 'pi pi-palette',
-            route: '/frontend'
-          },
-          {
-            label: 'Backend',
-            icon: 'pi pi-server',
-            route: '/backend'
-          }
-        ]
-      }
-    ]
   }
+  // {
+  //   label: 'Projetos',
+  //   icon: 'pi pi-box',
+  //   items: [
+  //     {
+  //       label: 'Engenharia de Dados',
+  //       icon: 'pi pi-cog',
+  //       route: '/data-engineering'
+  //     },
+  //     {
+  //       label: 'Ciência de dados',
+  //       icon: 'pi pi-chart-bar',
+  //       route: '/data-science'
+  //     },
+  //     {
+  //       label: 'Outros',
+  //       icon: 'pi pi-bolt',
+  //       items: [
+  //         {
+  //           label: 'Frontend',
+  //           icon: 'pi pi-palette',
+  //           route: '/frontend'
+  //         },
+  //         {
+  //           label: 'Backend',
+  //           icon: 'pi pi-server',
+  //           route: '/backend'
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // }
 ])
 </script>
 
