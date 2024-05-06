@@ -1,8 +1,8 @@
 <template>
   <div class="resume">
     <main class="main-content">
-      <section class="right-section">
-        <div class="right-content">
+      <section class="left-section">
+        <div class="left-content">
           <div class="profile">
             <div class="image">
               <img src="https://avatars.githubusercontent.com/u/91169043" alt="">
@@ -19,7 +19,6 @@
               Contato
             </h3>
             <ul>
-              </li>
               <li>
                 <font-awesome-icon icon="fa fa-envelope" class="m-1" />
                 <a href="mailto:guaradata@gmail.com">guaradata@gmail.com</a>
@@ -114,11 +113,14 @@
               Sobre mim
             </h2>
             <p class="para">
-              Sou o Douglas, formado em Estatística e Ciência de Dados. Com quase dois anos de experiência, atualmente atuo como Analista de Inteligência de Dados na ADN Construtora,
-               uma construtora e imobiliária atuante em mais de 25 cidades, com mais de cinco mil unidades entregues e outras sete mil e quinhentas em construção
+              Sou o Douglas, formado em Estatística e Ciência de Dados. Com quase dois anos de experiência, atualmente
+              atuo como Analista de Inteligência de Dados na ADN Construtora,
+              uma construtora e imobiliária atuante em mais de 25 cidades, com mais de cinco mil unidades entregues e
+              outras sete mil e quinhentas em construção
               <br>
               <br>
-              Na ADN Construtora, faço parte do time de Inteligência de Dados. Focamos em entregar soluções de dados para os mais variados setores da empresa utilizando, ferramentas, em sua maioria, da Microsoft Fabric.
+              Na ADN Construtora, faço parte do time de Inteligência de Dados. Focamos em entregar soluções de dados
+              para os mais variados setores da empresa utilizando, ferramentas, em sua maioria, da Microsoft Fabric.
               <br>
               <br>
             </p>
@@ -166,13 +168,6 @@
                   </h5>
                   <p class="para">
                     Bacharelado em Estatística e Ciência de Dados.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="awards sect">
-           
                   </p>
                 </div>
               </div>

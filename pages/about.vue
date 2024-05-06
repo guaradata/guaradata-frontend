@@ -5,8 +5,10 @@
       <h1 class="font-bold text-6xl m-5 font-brand">
         Guara<span class="font-brand-highlight">data</span>
       </h1>
-      <p class="font-bold text-lg">
-        O projeto nasceu no começo de 2024 como uma idea de compartilhar conteúdos relacionados à dados.
+      <p class="font-bold text-lg pl-12 pr-12">
+        Guaradata é um blog idealizado em dezembro de 2023, dedicado a compartilhar conteúdo sobre a área de dados, com
+        ênfase em Engenharia de Dados e Técnicas de IA. O blog foi desenvolvido desde o início utilizando tecnologias
+        como Nuxt, Tailwind, PrimeVue, NestJS, MongoDB, NGINX, PM2, entre outras.
       </p>
     </div>
     <div class="m-4 flex justify-center">
