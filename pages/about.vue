@@ -1,4 +1,3 @@
-<!-- eslint-disable space-before-function-paren -->
 <template>
   <div class="container-about text-center inline-block mt-6">
     <div class="first-section text-center">

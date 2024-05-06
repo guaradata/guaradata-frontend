@@ -27,9 +27,21 @@
             Projeto
           </h2>
           <ul>
-            <li><a href="#" class="text-gray-200 hover:text-white">Sobre o projeto</a></li>
-            <li><a href="#" class="text-gray-200 hover:text-white">Tecnologias frontend</a></li>
-            <li><a href="#" class="text-gray-200 hover:text-white">Tecnologias backend</a></li>
+            <li>
+              <NuxtLink to="/about" class="text-gray-200 hover:text-white">
+                Sobre o projeto
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/frontend-tech" class="text-gray-200 hover:text-white">
+                Tecnologias front-end
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/backend-tech" class="text-gray-200 hover:text-white">
+                Tecnologias back-end
+              </NuxtLink>
+            </li>
           </ul>
         </div>
       </div>
