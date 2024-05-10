@@ -24,21 +24,19 @@
         </NuxtLink>
       </template>
       <template #end>
-        <Button severity="danger" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-contact m-2" rounded>
-          <span class="font-bold">
-            <NuxtLink to="/contact" class="flex justify-center items-center">
+        <NuxtLink to="/contact" class="flex justify-center items-center">
+          <Button severity="danger" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-contact m-2" rounded>
+            <span class="font-bold">
               Contato
-            </NuxtLink>
-          </span>
-        </Button>
+            </span>
+          </Button>
+        </NuxtLink>
       </template>
     </Menubar>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 const items = ref([
   {
     label: 'Home',

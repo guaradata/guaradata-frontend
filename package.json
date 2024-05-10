@@ -16,9 +16,12 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@nuxt/content": "^2.12.1",
+    "@nuxtjs/mdc": "^0.7.0",
     "nuxt": "^3.10.3",
     "primeicons": "^6.0.1",
     "primevue": "^3.49.1",
+    "quill": "^2.0.1",
     "ts-node": "^10.9.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"

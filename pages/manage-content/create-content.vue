@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-12">
-    <div class="mb-6">
+  <div class="">
+    <div class="">
       <QuillEditor :editor-content="initialContent" :read-only="false" @update:editor-content="updateContent" />
     </div>
     <QuillContent class="mt-52" :editor-content="initialContent" />

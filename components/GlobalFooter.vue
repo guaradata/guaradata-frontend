@@ -42,6 +42,11 @@
                 Tecnologias back-end
               </NuxtLink>
             </li>
+            <li>
+              <NuxtLink to="/manage-content" class="text-gray-200 hover:text-white">
+                Administração
+              </NuxtLink>
+            </li>
           </ul>
         </div>
       </div>
