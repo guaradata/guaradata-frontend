@@ -13,11 +13,11 @@
 .firstSection {
   background-color: #ffff;
   height: auto;
-  max-height: 250px;
+  max-height: 450px;
   width: 20%;
   padding: 15px 15px 15px 15px;
   overflow: hidden;
-  margin: 2% 0% 2% 2%;
+  margin: 2% 2% 2% 2%;
   border-radius: 25px;
   border: 2px solid #e6e6e6;
 
@@ -30,8 +30,8 @@
 .secondSection {
   background-color: #fff;
   height: auto;
-  width: 65%;
-  margin: 2% 0% 2% 2%;
+  width: 80%;
+  margin: 2% 2% 2% 2%;
   border-radius: 3%;
   padding: 15px 15px 15px 15px;
   overflow: hidden;

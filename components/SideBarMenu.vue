@@ -9,6 +9,14 @@
           rounded>
           <span class="font-bold flex justify-start items-center">
             {{ item.label }}
+          </span>
+        </Button>
+      </NuxtLink>
+      <NuxtLink to="/" class="flex justify-center items-center">
+        <Button severity="secondary" icon="pi pi-arrow-up-right" aria-label="Sair" class="btn-sidebar m-1 w-full"
+          rounded>
+          <span class="font-bold flex justify-start items-center">
+            Sair
             <i class="icon pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
           </span>
         </Button>
@@ -32,9 +40,21 @@ const items = ref([
     aria: 'Create content button'
   },
   {
+    label: 'Arquivos do blog',
+    icon: 'pi pi-book',
+    route: '/manage-content/blog-files',
+    aria: 'View contents button'
+  },
+  {
     label: 'Visualizar conteúdos',
     icon: 'pi pi-book',
     route: '/manage-content/view-contents',
+    aria: 'View contents button'
+  },
+  {
+    label: 'Visualizar contatos',
+    icon: 'pi pi-book',
+    route: '/manage-content/view-contacts',
     aria: 'View contents button'
   }
 ])
