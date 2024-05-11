@@ -68,10 +68,8 @@ watch(() => props.editorContent, (newValue) => {
 
 <style>
 #editor {
-  height: 150px;
-}
-
-.editor {
-  padding: 50px;
+  height: 300px;
+  width: 100%;
+  color: black;
 }
 </style>

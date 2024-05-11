@@ -3,8 +3,8 @@
     <Menubar :model="items" class="menu">
       <template #start>
         <NuxtLink to="/">
-          <div class="brand inline-block flex items-center justify-center p-0">
-            <span><img class="w-14" src="~/assets/img/logos/guaradata-logo-1.svg"></span>
+          <div class="brand inline-block flex items-center justify-center p-0 ml-4">
+            <span><img class="w-14 mr-2" src="~/assets/img/logos/guaradata-logo-1.svg"></span>
             <!-- <h1 class="font-brand text-white font-bold text-2xl mt-0 p-0">
               guaradata
             </h1> -->
@@ -24,7 +24,7 @@
         </NuxtLink>
       </template>
       <template #end>
-        <NuxtLink to="/contact" class="flex justify-center items-center">
+        <NuxtLink to="/contact" class="flex justify-center items-center mr-3">
           <Button severity="danger" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-contact m-2" rounded>
             <span class="font-bold">
               Contato

@@ -12,18 +12,17 @@
 <style scoped>
 .firstSection {
   background-color: #ffff;
-  height: auto;
-  max-height: 450px;
   width: 20%;
-  padding: 15px 15px 15px 15px;
+  height: 450px;
+  padding: 15px;
   overflow: hidden;
-  margin: 2% 2% 2% 2%;
+  margin: 2% 0.5% 1% 0.5%;
   border-radius: 25px;
   border: 2px solid #e6e6e6;
 
   @media (max-width: 1060px) {
-    width: 100%;
-    margin: 20px 0px;
+    width: 20%;
+    margin: 20px 0;
   }
 }
 
@@ -31,16 +30,16 @@
   background-color: #fff;
   height: auto;
   width: 80%;
-  margin: 2% 2% 2% 2%;
-  border-radius: 3%;
-  padding: 15px 15px 15px 15px;
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
   overflow: hidden;
-  margin: 2% 0% 2% 2%;
+  margin: 2% 2% 2% 0%;
+  border: 2px solid #e6e6e6;
 
   @media (max-width: 1060px) {
     height: auto;
     background-position: top;
-    width: 100%;
+    width: 80%;
   }
 }
 </style>

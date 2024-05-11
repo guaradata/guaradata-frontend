@@ -41,6 +41,7 @@ watch(() => props.editorContent, (newValue) => {
 
 <style>
 #quillContent {
-  height: 300px;
+  height: auto;
+  color: black;
 }
 </style>

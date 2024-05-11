@@ -1,7 +1,7 @@
 <template>
   <div class="manage">
     <h1>
-      View Contents
+      Published blog contents
     </h1>
   </div>
 </template>

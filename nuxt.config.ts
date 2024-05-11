@@ -55,7 +55,7 @@ export default defineNuxtConfig({
     // cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities',
     importPT: { from: "~/presets/lara/" },
     options: {
-      unstyled: true,
+      unstyled: false,
       ripple: true,
       inputStyle: "filled",
     },

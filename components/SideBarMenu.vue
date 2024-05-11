@@ -46,9 +46,15 @@ const items = ref([
     aria: 'View contents button'
   },
   {
-    label: 'Visualizar conteúdos',
+    label: 'Conteúdos publicados',
     icon: 'pi pi-book',
-    route: '/manage-content/view-contents',
+    route: '/manage-content/published-blog-contents',
+    aria: 'View contents button'
+  },
+  {
+    label: 'Conteúdos não publicados',
+    icon: 'pi pi-book',
+    route: '/manage-content/unpublished-blog-contents',
     aria: 'View contents button'
   },
   {
