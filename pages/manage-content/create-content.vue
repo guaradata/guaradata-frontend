@@ -6,13 +6,21 @@
           <h1 class="text-black text-xl p-5 font-bold">
             Preencha as informações iniciais
           </h1>
-          <div class="flex flex-col">
-            <div class="border-2 border-dashed p-5">
-              <p>Título do texto:</p>
+          <div class="flex flex-col justify-content-center">
+            <div class="border-4 border-dashed p-5">
+              <p class="pt-3 m-1 font-bold text-lg">
+                Título do texto:
+              </p>
               <input id="title" v-model="titleInput" type="text" placeholder="Digite o título do texto"
                 class="w-full border-2 p-2 m-1">
-              <input v-model="contentSummaryInput" type="contentSummary" placeholder="Digite o resumo do texto"
-                class="w-full border-2 p-2 m-1">
+              <p class="pt-3 m-1 font-bold text-lg">
+                Resumo do texto:
+              </p>
+              <CreateBlogContentTextArea :text-area="contentSummaryInput" class="w-full border-2 p-2 m-1"
+                @update:text-area="updateTextArea" />
+              <p class="pt-3 m-1 font-bold text-lg">
+                Gategoria do texto:
+              </p>
               <CreateBlogContentDropDown :selected-country="contentCategory" class="w-full m-1"
                 @update:selected-country="updateContentCategory" />
             </div>
@@ -28,16 +36,20 @@
             Escreva seu conteúdo
           </h1>
           <div class="flex flex-col">
-            <div class="border-2 border-dashed p-5">
+            <div class="border-4 border-dashed p-5">
               <QuillEditor :editor-content="initialContent" :read-only="false" @update:editor-content="updateContent" />
+              <QuillContent :style="{ display: showContent ? 'block' : 'none' }" :editor-content="initialContent" />
+              <div class="flex py-4">
+                <Button label="Mostrar conteúdo" class="btn-stepper" rounded
+                  :style="{ display: showContent ? 'none' : 'block' }" @click="switchShowContent" />
+                <Button label="Ocultar conteúdo" class="btn-stepper" rounded
+                  :style="{ display: showContent ? 'block' : 'none' }" @click="switchShowContent" />
+              </div>
             </div>
-            <QuillContent v-if="showContent" :editor-content="initialContent" />
           </div>
+
           <div class="flex py-4">
-            <Button label="Mostrar conteúdo" class="btn-stepper" rounded @click="switchShowContent" />
-          </div>
-          <div class="flex py-4">
-            <Button label="Back" severity="secondary" class="btn-stepper" rounded @click="prevCallback" />
+            <Button label="Voltar" severity="secondary" class="btn-stepper" rounded @click="prevCallback" />
           </div>
         </template>
       </StepperPanel>
@@ -48,10 +60,15 @@
 <script setup>
 import Stepper from 'primevue/stepper'
 import StepperPanel from 'primevue/stepperpanel'
+import CreateBlogContentTextArea from '~/components/CreateBlogContentTextArea.vue'
 
 const titleInput = ref('')
 const contentSummaryInput = ref('')
 const contentCategory = ref('')
+
+const updateTextArea = (newContent) => {
+  contentSummaryInput.value = newContent
+}
 
 const updateContentCategory = (newContent) => {
   contentCategory.value = newContent.name
@@ -113,6 +130,7 @@ fetchData()
 
 input {
   padding-left: 15px;
+  border-radius: 5px;
 }
 
 input::placeholder {
@@ -120,5 +138,13 @@ input::placeholder {
   color: #999;
   font-style: italic;
   opacity: 1;
+}
+
+#content-summary {
+  height: 150px;
+}
+
+#content-summary::placeholder {
+  margin: 0px;
 }
 </style>
