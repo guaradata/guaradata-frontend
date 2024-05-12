@@ -2,21 +2,21 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
-    head: {
-      link: [
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/quill@2.0.1/dist/quill.core.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/quill@2.0.1/dist/quill.snow.css",
-        },
-      ],
-      script: [
-        { src: "https://cdn.jsdelivr.net/npm/quill@2.0.1/dist/quill.core.js" },
-      ],
-    },
+    // head: {
+    //   link: [
+    //     {
+    //       rel: "stylesheet",
+    //       href: "https://cdn.jsdelivr.net/npm/quill@2.0.1/dist/quill.core.css",
+    //     },
+    //     {
+    //       rel: "stylesheet",
+    //       href: "https://cdn.jsdelivr.net/npm/quill@2.0.1/dist/quill.snow.css",
+    //     },
+    //   ],
+    //   script: [
+    //     { src: "https://cdn.jsdelivr.net/npm/quill@2.0.1/dist/quill.core.js" },
+    //   ],
+    // },
   },
   build: {
     transpile: [

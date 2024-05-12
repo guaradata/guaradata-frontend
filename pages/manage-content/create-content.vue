@@ -4,17 +4,21 @@
       <StepperPanel>
         <template #content="{ nextCallback }">
           <h1 class="text-black text-xl p-5 font-bold">
-            Escreva seu conteúdo
+            Preencha as informações iniciais
           </h1>
           <div class="flex flex-col">
             <div class="border-2 border-dashed p-5">
-              <input id="title" type="text" placeholder="Digite o título do texto" class="w-full border-2 p-2 m-1">
-              <input type="contentSummary" placeholder="Digite o resumo do texto" class="w-full border-2 p-2 m-1">
-              <CreateBlogContentDropDown class="w-full m-1" />
+              <p>Título do texto:</p>
+              <input id="title" v-model="titleInput" type="text" placeholder="Digite o título do texto"
+                class="w-full border-2 p-2 m-1">
+              <input v-model="contentSummaryInput" type="contentSummary" placeholder="Digite o resumo do texto"
+                class="w-full border-2 p-2 m-1">
+              <CreateBlogContentDropDown :selected-country="contentCategory" class="w-full m-1"
+                @update:selected-country="updateContentCategory" />
             </div>
           </div>
           <div class="flex py-4">
-            <Button label="Próximo" class="btn-stepper" rounded @click="nextCallback" />
+            <Button label="Próximo" class="btn-stepper" rounded @click="validateForm(nextCallback)" />
           </div>
         </template>
       </StepperPanel>
@@ -44,12 +48,25 @@
 <script setup>
 import Stepper from 'primevue/stepper'
 import StepperPanel from 'primevue/stepperpanel'
-import InputGroup from 'primevue/inputgroup'
-import InputGroupAddon from 'primevue/inputgroupaddon'
-import 'quill/dist/quill.core.css'
+
+const titleInput = ref('')
+const contentSummaryInput = ref('')
+const contentCategory = ref('')
+
+const updateContentCategory = (newContent) => {
+  contentCategory.value = newContent.name
+}
+
+const validateForm = (nextCallback) => {
+  console.log(titleInput.value)
+  console.log(contentSummaryInput.value)
+  console.log(contentCategory.value)
+  nextCallback()
+}
+
+const response = ref(null)
 const initialContent = ref('')
 const showContent = ref(false)
-const response = ref(null)
 
 const updateContent = (newContent) => {
   initialContent.value = newContent
@@ -64,7 +81,6 @@ const createContent = () => {
 
 const switchShowContent = () => {
   showContent.value = !showContent.value
-  contentToShow.value = initialContent.value
 }
 
 watchEffect(() => {
@@ -93,5 +109,16 @@ fetchData()
   background-color: $btn-blog;
   border: none;
   color: white;
+}
+
+input {
+  padding-left: 15px;
+}
+
+input::placeholder {
+  padding-left: 3px;
+  color: #999;
+  font-style: italic;
+  opacity: 1;
 }
 </style>

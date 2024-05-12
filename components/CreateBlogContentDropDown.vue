@@ -24,13 +24,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+const props = defineProps({
+  selectedCountry: {
+    type: String,
+    required: true
+  }
+})
 
-const selectedCountry = ref()
+const emits = defineEmits(['update:selectedCountry'])
+const selectedCountry = ref(props.selectedCountry)
+
+watch(() => selectedCountry.value, () => {
+  emits('update:selectedCountry', selectedCountry.value)
+})
+
 const countries = ref([
   { name: 'Aprendizado de máquina', code: 'AM' },
   { name: 'Estatística', code: 'Estat' },
   { name: 'Engenharia de dados', code: 'ED' }
-
 ])
 </script>
