@@ -25,6 +25,7 @@ watch(() => textArea.value, () => {
   height: 200px;
   border: 1px solid black;
   position: relative;
+  border-radius: 5px;
 }
 
 .text-area {
@@ -36,6 +37,7 @@ watch(() => textArea.value, () => {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 5px;
 }
 
 .text-area::placeholder {

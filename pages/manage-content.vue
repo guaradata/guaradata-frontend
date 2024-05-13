@@ -13,7 +13,7 @@
 .firstSection {
   background-color: #ffff;
   width: 20%;
-  height: 450px;
+  height: 500px;
   padding: 15px;
   overflow: hidden;
   margin: 2% 0.5% 1% 0.5%;

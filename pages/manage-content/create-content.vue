@@ -1,7 +1,13 @@
 <template>
   <div class="card">
-    <Stepper orientation="vertical">
+    <Stepper linear orientation="horizontal">
       <StepperPanel>
+        <template #header="{ index, active }">
+          <span
+            :class="['rounded-lg p-3 border-2 w-10rem h-3rem inline-flex align-items-center justify-content-center', { 'bg-primary border-primary': index <= active, 'surface-border': index > active }]">
+            <i class="pi pi-cog" :class="active ? 'pi-spin' : ''" style="font-size: 1.5rem" />
+          </span>
+        </template>
         <template #content="{ nextCallback }">
           <h1 class="text-black text-xl p-5 font-bold">
             Preencha as informações iniciais
@@ -26,30 +32,58 @@
             </div>
           </div>
           <div class="flex py-4">
-            <Button label="Próximo" class="btn-stepper" rounded @click="validateForm(nextCallback)" />
+            <Button label="Próximo" class="btn-stepper m-1" rounded @click="validateForm(nextCallback)" />
           </div>
         </template>
       </StepperPanel>
       <StepperPanel>
-        <template #content="{ prevCallback }">
+        <template #header="{ index, active }">
+          <span
+            :class="['rounded-lg p-3 border-2 w-10rem h-3rem inline-flex align-items-center justify-content-center', { 'bg-primary border-primary': index <= active, 'surface-border': index > active }]">
+            <i class="pi pi-star" :class="active ? 'pi-spin' : ''" style="font-size: 1.5rem" />
+          </span>
+        </template>
+        <template #content="{ prevCallback, nextCallback }">
           <h1 class="text-black text-xl p-5 font-bold">
             Escreva seu conteúdo
           </h1>
           <div class="flex flex-col">
             <div class="border-4 border-dashed p-5">
               <QuillEditor :editor-content="initialContent" :read-only="false" @update:editor-content="updateContent" />
-              <QuillContent :style="{ display: showContent ? 'block' : 'none' }" :editor-content="initialContent" />
               <div class="flex py-4">
-                <Button label="Mostrar conteúdo" class="btn-stepper" rounded
-                  :style="{ display: showContent ? 'none' : 'block' }" @click="switchShowContent" />
-                <Button label="Ocultar conteúdo" class="btn-stepper" rounded
-                  :style="{ display: showContent ? 'block' : 'none' }" @click="switchShowContent" />
+                <Button label="Mostrar conteúdo" class="btn-stepper m-1" rounded
+                  :style="{ 'display': showContent ? 'none' : 'block' }" @click="switchShowContent" />
+                <Button label="Ocultar conteúdo" class="btn-stepper m-1" rounded
+                  :style="{ 'display': showContent ? 'block' : 'none' }" @click="switchShowContent" />
               </div>
+              <QuillContent :style="{ display: showContent ? 'block' : 'none' }" :editor-content="initialContent"
+                id-content="1" />
             </div>
           </div>
-
           <div class="flex py-4">
-            <Button label="Voltar" severity="secondary" class="btn-stepper" rounded @click="prevCallback" />
+            <Button label="Voltar" severity="secondary" class="btn-stepper m-1" rounded @click="prevCallback" />
+            <Button label="Próximo" severity="secondary" class="btn-stepper m-1" rounded @click="nextCallback" />
+          </div>
+        </template>
+      </StepperPanel>
+      <StepperPanel>
+        <template #header="{ index, active }">
+          <span
+            :class="['rounded-lg p-3 border-2 w-10rem h-3rem inline-flex align-items-center justify-content-center', { 'bg-primary border-primary': index <= active, 'surface-border': index > active }]">
+            <i class="pi pi-sync" :class="active ? 'pi-spin' : ''" style="font-size: 1.5rem" />
+          </span>
+        </template>
+        <template #content="{ prevCallback }">
+          <h1 class="text-black text-xl p-5 font-bold">
+            Revise o conteúdo
+          </h1>
+          <div class="flex flex-col">
+            <div class="border-4 border-dashed p-5">
+              <QuillContent :editor-content="initialContent" id-content="2" @update:editor-content="updateContent" />
+            </div>
+          </div>
+          <div class="flex py-4">
+            <Button label="Voltar" severity="secondary" class="btn-stepper m-1" rounded @click="prevCallback" />
           </div>
         </template>
       </StepperPanel>

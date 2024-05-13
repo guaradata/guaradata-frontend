@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="quillContent" />
+    <div :id="`quillContent${props.idContent}`" />
   </div>
 </template>
 
@@ -8,6 +8,10 @@
 
 const props = defineProps({
   editorContent: {
+    type: String,
+    required: true
+  },
+  idContent: {
     type: String,
     required: true
   }
@@ -20,7 +24,7 @@ let quillInstance
 onMounted(async () => {
   if (process.client) {
     const Quill = (await import('quill')).default
-    quillInstance = new Quill('#quillContent', {
+    quillInstance = new Quill(`#quillContent${props.idContent}`, {
       readOnly: true,
       theme: 'bubble',
       modules: {

@@ -40,6 +40,12 @@ const items = ref([
     aria: 'Create content button'
   },
   {
+    label: 'Rascunhos',
+    icon: 'pi pi-book',
+    route: '/manage-content/saved-blog-content-drafts',
+    aria: 'Saved blog content drafts'
+  },
+  {
     label: 'Arquivos do blog',
     icon: 'pi pi-book',
     route: '/manage-content/blog-files',
