@@ -1,6 +1,10 @@
 class LoginService {
+  static runtimeConfig() {
+    return useRuntimeConfig();
+  }
+
   static validate(): Promise<boolean | undefined> {
-    return fetch("http://localhost/api/user/me", {
+    return fetch(`${this.runtimeConfig().public.NUXT_API_URL}/user/me`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -23,7 +27,7 @@ class LoginService {
   }
 
   static async login(userAccess: object): Promise<boolean | undefined> {
-    return await fetch("http://localhost/api/login", {
+    return await fetch(`${this.runtimeConfig().public.NUXT_API_URL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userAccess),

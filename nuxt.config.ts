@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      NUXT_API_URL: process.env.NUXT_API_URL,
+    },
+  },
   content: {
     watch: {
       ws: {
