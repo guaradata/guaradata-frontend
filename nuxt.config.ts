@@ -1,6 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  content: {
+    watch: {
+      ws: {
+        port: 4000,
+        showURL: true,
+      },
+    },
+  },
   app: {
     // head: {
     //   link: [

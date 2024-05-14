@@ -6,7 +6,7 @@ WORKDIR ${_WORKDIR}
 
 COPY package*.json .
 
-RUN npm ci && npm cache clean --force
+RUN npm cache clean --force
 
 ENV PM2_DISABLE_TTY=true
 

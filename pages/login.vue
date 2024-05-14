@@ -20,15 +20,13 @@
         class="w-full border-2 p-2" required>
     </div>
     <div class="button-component component flex justify-center">
-      <NuxtLink to="/" class="flex justify-center items-center">
-        <Button severity="secondary" icon="pi pi-arrow-up-right" label="Fazer login" class="btn-profile m-1" rounded
-          @click="login">
-          <span class="font-bold flex justify-center items-center">
-            Entrar
-            <i class="icon pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
-          </span>
-        </Button>
-      </NuxtLink>
+      <Button severity="secondary" icon="pi pi-arrow-up-right" label="Fazer login" class="btn-profile m-1" rounded
+        @click="login">
+        <span class="font-bold flex justify-center items-center">
+          Entrar
+          <i class="icon pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
+        </span>
+      </Button>
     </div>
   </div>
 </template>
@@ -42,9 +40,8 @@ const login = async () => {
     email: emailInput.value,
     password: passwordInput.value
   }
-  const accessToken = await
-    LoginUtils.LoginService.login(data)
-  console.log(accessToken)
+  if (await
+    LoginUtils.LoginService.login(data)) { await navigateTo('/manage-content') }
 }
 </script>
 
