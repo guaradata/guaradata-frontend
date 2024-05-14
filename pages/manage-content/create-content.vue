@@ -115,7 +115,6 @@ const validateForm = (nextCallback) => {
   nextCallback()
 }
 
-const response = ref(null)
 const initialContent = ref('')
 const showContent = ref(false)
 
@@ -123,31 +122,9 @@ const updateContent = (newContent) => {
   initialContent.value = newContent
 }
 
-const createContent = () => {
-  const tempDiv = document.querySelector('#blogContent')
-  if (tempDiv) {
-    tempDiv.innerHTML = response.value.content
-  }
-}
-
 const switchShowContent = () => {
   showContent.value = !showContent.value
 }
-
-watchEffect(() => {
-  if (response.value !== null) {
-    createContent()
-  }
-})
-
-const fetchData = async () => {
-  const { data } = await useFetch('http://localhost:5000/blogcontents/663c0330fac3368569efb3ba', {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' }
-  })
-  response.value = { ...data.value }
-}
-fetchData()
 
 </script>
 
