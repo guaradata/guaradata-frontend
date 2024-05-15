@@ -1,28 +1,27 @@
 <template>
-  <NuxtLink to="/blog" class="flex justify-center items-center">
+  <NuxtLink :to="`/blog/${props.blogContent._id}`" class="flex justify-center items-center">
     <Card style="overflow: hidden" class="card m-2">
       <template #header>
-        <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png">
+        <div class="container-img">
+          <img alt="user header" :src="props.blogContent.coverImage">
+        </div>
       </template>
       <template #title>
-        Blog content
+        {{ props.blogContent.title }}
       </template>
       <template #subtitle>
-        Blog content subtitle
+        {{ props.blogContent.author }}
       </template>
       <template #content>
         <p class="m-0">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-          deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-          neque
-          quas!
+          {{ props.blogContent.contentSummary }}
         </p>
       </template>
       <template #footer>
         <div class="flex justify-center items-center">
           <Button severity="null" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-go-blog m-1" rounded>
             <span class="font-bold flex justify-center items-center">
-              Ler conteúdo
+              Ler mais
               <i class="icon pi pi-spin pi-cog ml-2" style="font-size: 1rem" />
             </span>
           </Button>
@@ -33,8 +32,26 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  blogContent: {
+    type: Object,
+    required: true
+  }
+})
+// ['_id', 'title', 'author', 'content', 'publicationDate', 'updatedAt', 'category', 'keywords', 'coverImage', 'tags', 'language']
 </script>
 <style lang="scss" scoped>
+.container-img {
+  height: 300px;
+  overflow: hidden;
+}
+
+.container-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .card {
   width: 25em;
 }

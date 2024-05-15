@@ -31,7 +31,11 @@ onMounted(async () => {
         toolbar: null
       }
     })
-    quillInstance.setContents(editorContent.value)
+    if (typeof (editorContent.value) === 'string') {
+      quillInstance.setContents(JSON.parse(editorContent.value))
+    } else {
+      quillInstance.setContents(editorContent.value)
+    }
   }
 })
 

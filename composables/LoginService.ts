@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 class LoginService {
   static runtimeConfig() {
     return useRuntimeConfig();
@@ -21,7 +22,7 @@ class LoginService {
         }
       })
       .catch((error) => {
-        console.error("Oh No! There was a problem: \n", error);
+        console.error("Error: \n", error);
         return false;
       });
   }
@@ -44,7 +45,29 @@ class LoginService {
         }
       })
       .catch((error) => {
-        console.error("Oh No! There was a problem: \n", error);
+        console.error("Error: \n", error);
+        return false;
+      });
+  }
+
+  static async logout(): Promise<boolean | undefined> {
+    return await fetch(`${this.runtimeConfig().public.NUXT_API_URL}/logout`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(function (response) {
+        if (response.status === 401) {
+          return false;
+        }
+        if (!response.ok) {
+          throw new Error("HTTP status " + response.status);
+        }
+        if (response.status === 200) {
+          return true;
+        }
+      })
+      .catch((error) => {
+        console.error("Error: \n", error);
         return false;
       });
   }

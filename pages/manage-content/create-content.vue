@@ -56,6 +56,7 @@
                 <Button label="Ocultar conteúdo" class="btn-stepper m-1" rounded
                   :style="{ 'display': showContent ? 'block' : 'none' }" @click="switchShowContent" />
               </div>
+              {{ JSON.stringify(initialContent) }}
               <QuillContent :style="{ display: showContent ? 'block' : 'none' }" :editor-content="initialContent"
                 id-content="1" />
             </div>
@@ -94,7 +95,6 @@
 <script setup>
 import Stepper from 'primevue/stepper'
 import StepperPanel from 'primevue/stepperpanel'
-import CreateBlogContentTextArea from '~/components/CreateBlogContentTextArea.vue'
 
 const titleInput = ref('')
 const contentSummaryInput = ref('')

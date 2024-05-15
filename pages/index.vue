@@ -5,11 +5,11 @@
         <div class="typed-text-section w-full pl-48 mt-32">
           <TypedText />
           <div class="text-center">
-            <h1 class="text-important font-bold text-2xl mt-5 p-3 rounded inline-block">
+            <h1 class="text-important font-bold text-2xl mt-8 rounded inline-block">
               Ajudamos você a criar soluções na área de dados
             </h1>
           </div>
-          <div class="flex justify-center mt-2">
+          <div class="flex justify-center mt-4">
             <NuxtLink to="/blog" class="flex justify-center items-center">
               <Button severity="danger" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-blog m-1" rounded>
                 <span class="font-bold flex justify-center items-center">
@@ -34,19 +34,22 @@
       </div>
     </div>
     <div class="second-section">
-      <div class="cards-blog-home">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+      <div class="blog-content">
+        <div v-if="response" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center">
+          <div v-for="(item, index) in response" :key="index">
+            <BlogCard :blog-content="item" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+<script setup lang="ts">
+const { data } = await useAsyncData(
+  () => $fetch(`${useRuntimeConfig().public.NUXT_API_URL}/blogcontents`)
+)
+const response = ref(data)
+</script>
 <style lang="scss" scoped>
 .img-container {
   position: relative;
@@ -92,6 +95,14 @@ img {
   align-items: flex-start;
 }
 
+.second-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
 @media (max-width: 1500px) {
   .typed-text-section {
     padding-left: 150px;
@@ -112,7 +123,7 @@ img {
   }
 }
 
-@media (max-width: 1015px) {
+@media (max-width: 1040px) {
   .typed-text-section {
     padding-left: 85px;
   }
@@ -126,7 +137,7 @@ img {
   }
 }
 
-@media (max-width: 910px) {
+@media (max-width: 930px) {
   .first-section {
     background-image: linear-gradient(to right, rgb(255, 255, 255), #DB7E2C 65%, $global-background-soft);
   }

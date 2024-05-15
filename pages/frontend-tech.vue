@@ -26,6 +26,11 @@
         </NuxtLink>
       </div>
       <div class="img p-5">
+        <NuxtLink to="https://primevue.org/">
+          <img src="https://i2.wp.com/www.primefaces.org/wp-content/uploads/2021/10/primevue-logo-1.png">
+        </NuxtLink>
+      </div>
+      <div class="img p-5">
         <NuxtLink to="https://www.typescriptlang.org/">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg">
         </NuxtLink>
@@ -48,6 +53,12 @@
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original-wordmark.svg">
         </NuxtLink>
       </div>
+      <div class="img p-5">
+        <NuxtLink to="https://quilljs.com/">
+          <img
+            src="https://camo.githubusercontent.com/b00eb17c6109d0a1de6ccaa488645757e459b7c2e4901e9f805db5487821e6c7/68747470733a2f2f7175696c6c6a732e636f6d2f6173736574732f696d616765732f6c6f676f2e737667">
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
@@ -55,6 +66,7 @@
 <style lang="scss" scoped>
 img {
   width: 300px;
+  height: 300px;
   padding: 15px;
   border: 5px solid #7A2A0A;
   border-radius: 15%;
@@ -80,6 +92,11 @@ img:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
   }
 }
 </style>

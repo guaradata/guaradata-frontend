@@ -12,15 +12,13 @@
           </span>
         </Button>
       </NuxtLink>
-      <NuxtLink to="/" class="flex justify-center items-center">
-        <Button severity="secondary" icon="pi pi-arrow-up-right" aria-label="Sair" class="btn-sidebar m-1 w-full"
-          rounded>
-          <span class="font-bold flex justify-start items-center">
-            Sair
-            <i class="icon pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
-          </span>
-        </Button>
-      </NuxtLink>
+      <Button severity="secondary" icon="pi pi-arrow-up-right" aria-label="Sair" class="btn-sidebar m-1 w-full" rounded
+        @click="logout">
+        <span class="font-bold flex justify-start items-center">
+          Sair
+          <i class="icon pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
+        </span>
+      </Button>
     </div>
   </div>
 </template>
@@ -70,6 +68,11 @@ const items = ref([
     aria: 'View contents button'
   }
 ])
+
+const logout = async () => {
+  await LoginUtils.LoginService.logout()
+  await navigateTo('/')
+}
 </script>
 
 <style lang="scss" scoped>

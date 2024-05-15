@@ -54,6 +54,7 @@
 <style lang="scss" scoped>
 img {
   width: 300px;
+  height: 300px;
   padding: 15px;
   border: 5px solid #7A2A0A;
   border-radius: 15%;
@@ -79,6 +80,11 @@ img:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
   }
 }
 </style>

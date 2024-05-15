@@ -5,7 +5,6 @@
     "no-console": "off",
     "semi": "off",
     "comma-dangle": "off",
-    "quotes": "off",
     "indent": "off",
     "vue/html-indent": "off",
     "vue/html-closing-bracket-newline": "off",
