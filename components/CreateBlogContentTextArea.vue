@@ -18,6 +18,10 @@ const textArea = ref(props.textArea)
 watch(() => textArea.value, () => {
   emits('update:textArea', textArea.value)
 })
+
+onMounted(() => {
+  textArea.value = props.textArea
+})
 </script>
 <style lang="scss" scoped>
 .text-area-container {

@@ -63,22 +63,24 @@
               <p class="pt-3 m-1 font-bold text-lg">
                 Categoria do texto:
               </p>
-              <CreateBlogContentDropDown :selected-category="contentCategory" dropDataInfo="category" class="w-full m-1"
-                @update:selected-category="updateContentCategory" />
+              <CreateBlogContentDropDown :selected-category="contentCategory" drop-data-info="category"
+                :disabled="false" class="w-full m-1" @update:selected-category="updateContentCategory" />
               <p class="pt-3 m-1 font-bold text-lg">
                 Tags do texto:
               </p>
-              <CreateBlogContentFilterFields class="w-full m-1"></CreateBlogContentFilterFields>
+              <CreateBlogContentFilterFields class="w-full m-1" id-content="contentFilterFields1"
+                :selected-tags="contentTags" :disabled="false" @update:selected-tags="updateContentTags" />
               <p class="pt-3 m-1 font-bold text-lg">
                 Idioma do texto:
               </p>
-              <CreateBlogContentDropDown :selected-category="contentLanguage" dropDataInfo="tags" class="w-full m-1"
-                @update:selected-category="updateContentLanguage" />
+              <CreateBlogContentDropDown :selected-category="contentLanguage" drop-data-info="tags" class="w-full m-1"
+                :disabled="false" @update:selected-category="updateContentLanguage" />
               <p class="pt-3 m-1 font-bold text-lg">
                 Data de publicação do texto:
               </p>
               <div class="flex-auto">
-                <Calendar v-model="icondisplay" class="w-full m-1" showIcon iconDisplay="input" inputId="icondisplay" />
+                <Calendar v-model="icondisplay" class="w-full m-1" show-icon icon-display="input"
+                  input-id="icondisplay" />
               </div>
             </div>
           </div>
@@ -114,7 +116,8 @@
           </div>
           <div class="flex py-4">
             <Button label="Voltar" severity="secondary" class="btn-stepper m-1" rounded @click="prevCallback" />
-            <Button label="Próximo" severity="secondary" class="btn-stepper m-1" rounded @click="nextCallback" />
+            <Button label="Próximo" severity="secondary" class="btn-stepper m-1" rounded
+              @click="validateFormStep3(nextCallback)" />
           </div>
         </template>
       </StepperPanel>
@@ -131,6 +134,56 @@
           </h1>
           <div class="flex flex-col">
             <div class="border-4 border-dashed p-5">
+              <p class="pt-3 m-1 font-bold text-lg">
+                Autor do texto:
+              </p>
+              <input id="author" v-model="authorInput" type="text" class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
+                E-mail do autor:
+              </p>
+              <input id="author-email" v-model="authorEmailInput" type="text" class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
+                Data de criação:
+              </p>
+              <input id="author-email" v-model="updateAtInput" type="text" class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
+                Data de atualização:
+              </p>
+              <input id="author-email" v-model="createdAtInput" type="text" class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
+                Título do texto:
+              </p>
+              <input id="title" v-model="titleInput" type="text" placeholder="Digite o título do texto"
+                class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
+                Resumo do texto:
+              </p>
+              <div class="text-area-container">
+                <textarea v-model="contentSummaryInput" class="text-area" placeholder="Digite o resumo do texto"
+                  disabled />
+              </div>
+              <p class="pt-3 m-1 font-bold text-lg">
+                Categoria do texto:
+              </p>
+              <CreateBlogContentDropDown :selected-category="contentCategory" drop-data-info="category"
+                class="w-full m-1" :disabled="true" @update:selected-category="updateContentCategory" />
+              <p class="pt-3 m-1 font-bold text-lg">
+                Tags do texto:
+              </p>
+              <CreateBlogContentFilterFields id-content="contentFilterFields2" class="w-full m-1"
+                :selected-tags="contentTags" :disabled="true" @update:selected-tags="updateContentTags" />
+              <p class="pt-3 m-1 font-bold text-lg">
+                Idioma do texto:
+              </p>
+              <CreateBlogContentDropDown :selected-category="contentLanguage" drop-data-info="tags" class="w-full m-1"
+                :disabled="true" @update:selected-category="updateContentLanguage" />
+              <p class="pt-3 m-1 font-bold text-lg">
+                Data de publicação do texto:
+              </p>
+              <div class="flex-auto">
+                <Calendar v-model="icondisplay" class="w-full m-1" show-icon icon-display="input" input-id="icondisplay"
+                  disabled />
+              </div>
               <QuillContent :editor-content="initialContent" id-content="2" />
             </div>
           </div>
@@ -154,15 +207,14 @@ const createdAtInput = ref('')
 
 onMounted(async () => {
   const data = await LoginUtils.LoginService.validate(true)
-  let date = new Date()
-  let date2 = new Date(date.valueOf() - date.getTimezoneOffset() * 60000)
-  var dataBase = date2.toISOString().replace(/\.\d{3}Z$/, '')
+  const date = new Date()
+  const date2 = new Date(date.valueOf() - date.getTimezoneOffset() * 60000)
+  const dataBase = date2.toISOString().replace(/\.\d{3}Z$/, '')
   authorInput.value = data.userData.name
   authorEmailInput.value = data.userData.email
   updateAtInput.value = dataBase
   createdAtInput.value = dataBase
-}
-)
+})
 
 const validateFormStep1 = (nextCallback) => {
   console.log(authorInput.value)
@@ -175,6 +227,7 @@ const validateFormStep1 = (nextCallback) => {
 const titleInput = ref('')
 const contentSummaryInput = ref('')
 const contentCategory = ref({})
+const contentTags = ref([])
 const contentLanguage = ref({})
 
 const updateTextArea = (newContent) => {
@@ -185,11 +238,28 @@ const updateContentCategory = (newContent) => {
   contentCategory.value = newContent
 }
 
+const updateContentTags = (newContent) => {
+  contentTags.value = newContent
+}
+
 const updateContentLanguage = (newContent) => {
   contentLanguage.value = newContent
 }
 
 const validateFormStep2 = (nextCallback) => {
+  console.log(titleInput.value)
+  console.log(contentSummaryInput.value)
+  console.log(contentCategory.value)
+  console.log(contentLanguage.value)
+  nextCallback()
+}
+
+const validateFormStep3 = (nextCallback) => {
+  console.log('Tags', contentTags.value)
+  console.log(authorInput.value)
+  console.log(authorEmailInput.value)
+  console.log(updateAtInput.value)
+  console.log(createdAtInput.value)
   console.log(titleInput.value)
   console.log(contentSummaryInput.value)
   console.log(contentCategory.value)
@@ -241,5 +311,32 @@ input::placeholder {
 
 #content-summary::placeholder {
   margin: 0px;
+}
+
+.text-area-container {
+  width: 100%;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+  border-radius: 5px;
+}
+
+.text-area {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.text-area::placeholder {
+  padding-left: 3px;
+  color: #999;
+  font-style: italic;
+  opacity: 1;
 }
 </style>

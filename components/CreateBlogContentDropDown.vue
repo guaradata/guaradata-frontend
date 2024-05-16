@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center">
     <Dropdown v-model="selectedCategory.name" :options="optionsDropDown" filter option-label="name"
-      placeholder="Selecione a categoria" class="w-full">
+      placeholder="Selecione a categoria" class="w-full" :disabled="disabled">
       <template #value="slotProps">
         <div v-if="slotProps.value" class="flex align-items-center">
           <img :alt="slotProps.value.label" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png"
@@ -31,6 +31,10 @@ const props = defineProps({
   },
   dropDataInfo: {
     type: String,
+    required: true
+  },
+  disabled: {
+    type: Boolean,
     required: true
   }
 })
