@@ -56,10 +56,15 @@
               <input id="title" v-model="titleInput" type="text" placeholder="Digite o título do texto"
                 class="w-full border-2 p-2 m-1">
               <p class="pt-3 m-1 font-bold text-lg">
+                URL do banner:
+              </p>
+              <input id="coverImage" v-model="coverImageInput" type="text" placeholder="Insira a URL do banner"
+                class="w-full border-2 p-2 m-1">
+              <p class="pt-3 m-1 font-bold text-lg">
                 Resumo do texto:
               </p>
               <CreateBlogContentTextArea :text-area="contentSummaryInput" class="w-full border-2 p-2 m-1"
-                @update:text-area="updateTextArea" />
+                :disabled="false" @update:text-area="updateTextArea" />
               <p class="pt-3 m-1 font-bold text-lg">
                 Categoria do texto:
               </p>
@@ -156,12 +161,15 @@
               <input id="title" v-model="titleInput" type="text" placeholder="Digite o título do texto"
                 class="w-full border-2 p-2 m-1" disabled>
               <p class="pt-3 m-1 font-bold text-lg">
+                URL do banner:
+              </p>
+              <input id="coverImage" v-model="titleInput" type="text" placeholder="Insira a URL do banner"
+                class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
                 Resumo do texto:
               </p>
-              <div class="text-area-container">
-                <textarea v-model="contentSummaryInput" class="text-area" placeholder="Digite o resumo do texto"
-                  disabled />
-              </div>
+              <CreateBlogContentTextArea :text-area="contentSummaryInput" class="w-full border-2 p-2 m-1"
+                :disabled="true" @update:text-area="updateTextArea" />
               <p class="pt-3 m-1 font-bold text-lg">
                 Categoria do texto:
               </p>
@@ -225,6 +233,7 @@ const validateFormStep1 = (nextCallback) => {
 }
 
 const titleInput = ref('')
+const coverImageInput = ref('')
 const contentSummaryInput = ref('')
 const contentCategory = ref({})
 const contentTags = ref([])
@@ -248,6 +257,7 @@ const updateContentLanguage = (newContent) => {
 
 const validateFormStep2 = (nextCallback) => {
   console.log(titleInput.value)
+  console.log(coverImageInput.value)
   console.log(contentSummaryInput.value)
   console.log(contentCategory.value)
   console.log(contentLanguage.value)
@@ -255,8 +265,9 @@ const validateFormStep2 = (nextCallback) => {
 }
 
 const validateFormStep3 = (nextCallback) => {
-  console.log('Tags', contentTags.value)
+  console.log(contentTags.value)
   console.log(authorInput.value)
+  console.log(coverImageInput.value)
   console.log(authorEmailInput.value)
   console.log(updateAtInput.value)
   console.log(createdAtInput.value)
@@ -311,32 +322,5 @@ input::placeholder {
 
 #content-summary::placeholder {
   margin: 0px;
-}
-
-.text-area-container {
-  width: 100%;
-  height: 200px;
-  border: 1px solid black;
-  position: relative;
-  border-radius: 5px;
-}
-
-.text-area {
-  width: 100%;
-  height: 100%;
-  resize: none;
-  padding: 10px;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 5px;
-}
-
-.text-area::placeholder {
-  padding-left: 3px;
-  color: #999;
-  font-style: italic;
-  opacity: 1;
 }
 </style>

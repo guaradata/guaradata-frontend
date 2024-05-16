@@ -1,6 +1,7 @@
 <template>
   <div class="text-area-container">
-    <textarea v-model="textArea" class="text-area" placeholder="Digite o resumo do texto" />
+    <textarea v-model="internalTextArea" class="text-area" placeholder="Digite o resumo do texto"
+      :disabled="disabled" />
   </div>
 </template>
 
@@ -9,19 +10,28 @@ const props = defineProps({
   textArea: {
     type: String,
     required: true
-  }
+  },
+  disabled: {
+    type: Boolean,
+    required: true
+  },
 })
 
 const emits = defineEmits(['update:textArea'])
-const textArea = ref(props.textArea)
+const { textArea } = toRefs(props);
+const internalTextArea = ref([...textArea.value]);
 
-watch(() => textArea.value, () => {
-  emits('update:textArea', textArea.value)
-})
+watch(textArea, (newVal) => {
+  if (newVal !== internalTextArea.value) {
+    internalTextArea.value = newVal;
+  }
+});
 
-onMounted(() => {
-  textArea.value = props.textArea
-})
+watch(internalTextArea, (newVal) => {
+  if (newVal !== textArea.value) {
+    emits('update:textArea', newVal);
+  }
+});
 </script>
 <style lang="scss" scoped>
 .text-area-container {
