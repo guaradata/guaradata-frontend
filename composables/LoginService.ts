@@ -1,24 +1,30 @@
 /* eslint-disable quotes */
+import { setData, clear } from "nuxt-storage/local-storage";
+
 class LoginService {
   static runtimeConfig() {
     return useRuntimeConfig();
   }
 
-  static validate(): Promise<boolean | undefined> {
+  static validate(getUserData: boolean = true): Promise<boolean | undefined> {
     return fetch(`${this.runtimeConfig().public.NUXT_API_URL}/user/me`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
     })
-      .then(function (response) {
-        if (response.status === 401) {
+      .then(async function (response) {
+        if ((await response.status) === 401) {
           return false;
         }
-        if (!response.ok) {
+        if (await !response.ok) {
           throw new Error("HTTP status " + response.status);
         }
-        if (response.status === 200) {
-          return true;
+        if ((await response.status) === 200) {
+          if (getUserData) {
+            return { userData: await response.json(), status: true };
+          } else {
+            return true;
+          }
         }
       })
       .catch((error) => {
@@ -41,6 +47,7 @@ class LoginService {
           throw new Error("HTTP status " + response.status);
         }
         if (response.status === 200) {
+          setData("auth", "true", 30, "d");
           return true;
         }
       })
@@ -63,6 +70,7 @@ class LoginService {
           throw new Error("HTTP status " + response.status);
         }
         if (response.status === 200) {
+          clear();
           return true;
         }
       })

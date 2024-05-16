@@ -31,7 +31,7 @@ onMounted(async () => {
         toolbar: null
       }
     })
-    if (typeof (editorContent.value) === 'string') {
+    if (typeof (editorContent.value) === 'string' && editorContent.value.length > 0) {
       quillInstance.setContents(JSON.parse(editorContent.value))
     } else {
       quillInstance.setContents(editorContent.value)
@@ -42,7 +42,9 @@ onMounted(async () => {
 watch(() => props.editorContent, (newValue) => {
   if (newValue !== editorContent.value) {
     editorContent.value = newValue
-    quillInstance.setContents(JSON.parse(editorContent.value))
+    if (typeof (editorContent.value) === 'string' && editorContent.value.length > 0) {
+      quillInstance.setContents(JSON.parse(editorContent.value))
+    }
   }
 })
 </script>

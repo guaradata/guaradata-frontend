@@ -12,13 +12,15 @@
           </span>
         </Button>
       </NuxtLink>
-      <Button severity="secondary" icon="pi pi-arrow-up-right" aria-label="Sair" class="btn-sidebar m-1 w-full" rounded
-        @click="logout">
-        <span class="font-bold flex justify-start items-center">
-          Sair
-          <i class="icon pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
-        </span>
-      </Button>
+      <div class="flex justify-center items-center">
+        <Button severity="secondary" icon="pi pi-arrow-up-right" aria-label="Sair" class="btn-sidebar m-1 w-full"
+          rounded @click="logout">
+          <span class="font-bold flex justify-start items-center">
+            Sair
+            <i class="icon pi pi-arrow-up-right ml-2" style="font-size: 1rem" />
+          </span>
+        </Button>
+      </div>
     </div>
   </div>
 </template>

@@ -78,7 +78,6 @@ const response = ref(data)
   justify-content: center;
   align-items: center;
   margin: 0px auto;
-  margin-top: 100px;
   max-width: 1600px;
 }
 

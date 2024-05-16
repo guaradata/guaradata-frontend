@@ -5,12 +5,48 @@
         <template #header="{ index, active }">
           <span
             :class="['rounded-lg p-3 border-2 w-10rem h-3rem inline-flex align-items-center justify-content-center', { 'bg-primary border-primary': index <= active, 'surface-border': index > active }]">
-            <i class="pi pi-cog" :class="active ? 'pi-spin' : ''" style="font-size: 1.5rem" />
+            <i class="pi pi-spinner" :class="active ? 'pi-spin' : ''" style="font-size: 1.5rem" />
           </span>
         </template>
         <template #content="{ nextCallback }">
           <h1 class="text-black text-xl p-5 font-bold">
-            Preencha as informações iniciais
+            Confira os dados gerados a partir do seu perfil e do dia atual:
+          </h1>
+          <div class="flex flex-col justify-content-center">
+            <div class="border-4 border-dashed p-5">
+              <p class="pt-3 m-1 font-bold text-lg">
+                Autor do texto:
+              </p>
+              <input id="author" v-model="authorInput" type="text" class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
+                E-mail do autor:
+              </p>
+              <input id="author-email" v-model="authorEmailInput" type="text" class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
+                Data de criação:
+              </p>
+              <input id="author-email" v-model="updateAtInput" type="text" class="w-full border-2 p-2 m-1" disabled>
+              <p class="pt-3 m-1 font-bold text-lg">
+                Data de atualização:
+              </p>
+              <input id="author-email" v-model="createdAtInput" type="text" class="w-full border-2 p-2 m-1" disabled>
+            </div>
+          </div>
+          <div class="flex py-4">
+            <Button label="Próximo" class="btn-stepper m-1" rounded @click="validateFormStep1(nextCallback)" />
+          </div>
+        </template>
+      </StepperPanel>
+      <StepperPanel>
+        <template #header="{ index, active }">
+          <span
+            :class="['rounded-lg p-3 border-2 w-10rem h-3rem inline-flex align-items-center justify-content-center', { 'bg-primary border-primary': index <= active, 'surface-border': index > active }]">
+            <i class="pi pi-cog" :class="active ? 'pi-spin' : ''" style="font-size: 1.5rem" />
+          </span>
+        </template>
+        <template #content="{ prevCallback, nextCallback }">
+          <h1 class="text-black text-xl p-5 font-bold">
+            Preencha as informações iniciais:
           </h1>
           <div class="flex flex-col justify-content-center">
             <div class="border-4 border-dashed p-5">
@@ -25,14 +61,30 @@
               <CreateBlogContentTextArea :text-area="contentSummaryInput" class="w-full border-2 p-2 m-1"
                 @update:text-area="updateTextArea" />
               <p class="pt-3 m-1 font-bold text-lg">
-                Gategoria do texto:
+                Categoria do texto:
               </p>
-              <CreateBlogContentDropDown :selected-country="contentCategory" class="w-full m-1"
-                @update:selected-country="updateContentCategory" />
+              <CreateBlogContentDropDown :selected-category="contentCategory" dropDataInfo="category" class="w-full m-1"
+                @update:selected-category="updateContentCategory" />
+              <p class="pt-3 m-1 font-bold text-lg">
+                Tags do texto:
+              </p>
+              <CreateBlogContentFilterFields class="w-full m-1"></CreateBlogContentFilterFields>
+              <p class="pt-3 m-1 font-bold text-lg">
+                Idioma do texto:
+              </p>
+              <CreateBlogContentDropDown :selected-category="contentLanguage" dropDataInfo="tags" class="w-full m-1"
+                @update:selected-category="updateContentLanguage" />
+              <p class="pt-3 m-1 font-bold text-lg">
+                Data de publicação do texto:
+              </p>
+              <div class="flex-auto">
+                <Calendar v-model="icondisplay" class="w-full m-1" showIcon iconDisplay="input" inputId="icondisplay" />
+              </div>
             </div>
           </div>
           <div class="flex py-4">
-            <Button label="Próximo" class="btn-stepper m-1" rounded @click="validateForm(nextCallback)" />
+            <Button label="Voltar" severity="secondary" class="btn-stepper m-1" rounded @click="prevCallback" />
+            <Button label="Próximo" class="btn-stepper m-1" rounded @click="validateFormStep2(nextCallback)" />
           </div>
         </template>
       </StepperPanel>
@@ -45,7 +97,7 @@
         </template>
         <template #content="{ prevCallback, nextCallback }">
           <h1 class="text-black text-xl p-5 font-bold">
-            Escreva seu conteúdo
+            Escreva seu conteúdo:
           </h1>
           <div class="flex flex-col">
             <div class="border-4 border-dashed p-5">
@@ -56,7 +108,6 @@
                 <Button label="Ocultar conteúdo" class="btn-stepper m-1" rounded
                   :style="{ 'display': showContent ? 'block' : 'none' }" @click="switchShowContent" />
               </div>
-              {{ JSON.stringify(initialContent) }}
               <QuillContent :style="{ display: showContent ? 'block' : 'none' }" :editor-content="initialContent"
                 id-content="1" />
             </div>
@@ -76,11 +127,11 @@
         </template>
         <template #content="{ prevCallback }">
           <h1 class="text-black text-xl p-5 font-bold">
-            Revise o conteúdo
+            Revise todo o conteúdo:
           </h1>
           <div class="flex flex-col">
             <div class="border-4 border-dashed p-5">
-              <QuillContent :editor-content="initialContent" id-content="2" @update:editor-content="updateContent" />
+              <QuillContent :editor-content="initialContent" id-content="2" />
             </div>
           </div>
           <div class="flex py-4">
@@ -96,24 +147,57 @@
 import Stepper from 'primevue/stepper'
 import StepperPanel from 'primevue/stepperpanel'
 
+const authorInput = ref('')
+const authorEmailInput = ref('')
+const updateAtInput = ref('')
+const createdAtInput = ref('')
+
+onMounted(async () => {
+  const data = await LoginUtils.LoginService.validate(true)
+  let date = new Date()
+  let date2 = new Date(date.valueOf() - date.getTimezoneOffset() * 60000)
+  var dataBase = date2.toISOString().replace(/\.\d{3}Z$/, '')
+  authorInput.value = data.userData.name
+  authorEmailInput.value = data.userData.email
+  updateAtInput.value = dataBase
+  createdAtInput.value = dataBase
+}
+)
+
+const validateFormStep1 = (nextCallback) => {
+  console.log(authorInput.value)
+  console.log(authorEmailInput.value)
+  console.log(updateAtInput.value)
+  console.log(createdAtInput.value)
+  nextCallback()
+}
+
 const titleInput = ref('')
 const contentSummaryInput = ref('')
-const contentCategory = ref('')
+const contentCategory = ref({})
+const contentLanguage = ref({})
 
 const updateTextArea = (newContent) => {
   contentSummaryInput.value = newContent
 }
 
 const updateContentCategory = (newContent) => {
-  contentCategory.value = newContent.name
+  contentCategory.value = newContent
 }
 
-const validateForm = (nextCallback) => {
+const updateContentLanguage = (newContent) => {
+  contentLanguage.value = newContent
+}
+
+const validateFormStep2 = (nextCallback) => {
   console.log(titleInput.value)
   console.log(contentSummaryInput.value)
   console.log(contentCategory.value)
+  console.log(contentLanguage.value)
   nextCallback()
 }
+
+const icondisplay = ref()
 
 const initialContent = ref('')
 const showContent = ref(false)

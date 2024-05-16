@@ -24,19 +24,30 @@
         </NuxtLink>
       </template>
       <template #end>
-        <NuxtLink to="/contact" class="flex justify-center items-center mr-3">
+        <NuxtLink v-if="!authValidator" to="/contact" class="flex justify-center items-center mr-3">
           <Button severity="danger" icon="pi pi-arrow-up-right" label="Visitar o blog" class="btn-contact m-2" rounded>
             <span class="font-bold">
               Contato
             </span>
           </Button>
         </NuxtLink>
+        <div v-else class="flex flex-col flex justify-center items-center mr-3">
+          <NuxtLink to="/manage-content" class="flex flex-col flex justify-center items-center">
+            <Avatar icon="pi pi-user" class="m-2" size="large" style="background-color: white; color: #1a2551"
+              shape="circle" />
+            <p class="text-white font-bold">
+              Olá, {{ dataUser.userData?.name }}!
+            </p>
+          </NuxtLink>
+        </div>
       </template>
     </Menubar>
   </div>
 </template>
 
 <script setup>
+import { getData } from 'nuxt-storage/local-storage';
+import { useRoute } from 'nuxt/app';
 const items = ref([
   {
     label: 'Home',
@@ -86,6 +97,30 @@ const items = ref([
   //   ]
   // }
 ])
+const dataUser = ref('')
+const authValidator = ref(false)
+const route = useRoute();
+
+const validateAvatar = async () => {
+  const getDataValidator = getData('auth');
+  if (getDataValidator) {
+    dataUser.value = await LoginUtils.LoginService.validate(true);
+    authValidator.value = true;
+  } else {
+    authValidator.value = false;
+  }
+}
+
+onMounted(async () => {
+  return await validateAvatar();
+})
+
+watch(
+  () => route.fullPath,
+  async () => {
+    return await validateAvatar();
+  }
+);
 </script>
 
 <style lang="scss" scoped>

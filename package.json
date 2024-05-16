@@ -19,6 +19,7 @@
     "@nuxt/content": "^2.12.1",
     "@nuxtjs/mdc": "^0.7.0",
     "nuxt": "^3.10.3",
+    "nuxt-storage": "^1.2.2",
     "primeicons": "^6.0.1",
     "primevue": "^3.52.0",
     "quill": "^2.0.1",
