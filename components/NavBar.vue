@@ -46,8 +46,6 @@
 </template>
 
 <script setup>
-import { getData } from 'nuxt-storage/local-storage';
-import { useRoute } from 'nuxt/app';
 const items = ref([
   {
     label: 'Home',
@@ -102,7 +100,7 @@ const authValidator = ref(false)
 const route = useRoute();
 
 const validateAvatar = async () => {
-  const getDataValidator = getData('auth');
+  const getDataValidator = localStorage.getItem('auth');
   if (getDataValidator) {
     dataUser.value = await LoginUtils.LoginService.validate(true);
     authValidator.value = true;

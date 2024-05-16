@@ -1,6 +1,4 @@
 /* eslint-disable quotes */
-import { setData, clear } from "nuxt-storage/local-storage";
-
 class LoginService {
   static runtimeConfig() {
     return useRuntimeConfig();
@@ -47,7 +45,7 @@ class LoginService {
           throw new Error("HTTP status " + response.status);
         }
         if (response.status === 200) {
-          setData("auth", "true", 30, "d");
+          localStorage.setItem("auth", "true");
           return true;
         }
       })
@@ -70,7 +68,7 @@ class LoginService {
           throw new Error("HTTP status " + response.status);
         }
         if (response.status === 200) {
-          clear();
+          localStorage.removeItem("auth");
           return true;
         }
       })
