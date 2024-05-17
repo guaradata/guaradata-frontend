@@ -37,10 +37,15 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData(
-  () => $fetch(`${useRuntimeConfig().public.NUXT_API_URL}/blogcontents`)
-)
-const response = ref(data)
+const response = ref([])
+onMounted(async () => {
+  const dataResponse = await BlogContent.BlogContentService.getBlogContents()
+  if (dataResponse.success) {
+    response.value = dataResponse.data
+  } else {
+    response.value = []
+  }
+})
 </script>
 
 <style lang="scss" scoped>
