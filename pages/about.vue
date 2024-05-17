@@ -6,7 +6,8 @@
       </h1>
       <p class="font-bold text-lg pl-12 pr-12">
         Guaradata é um blog idealizado em dezembro de 2023, dedicado a compartilhar conteúdo sobre a área de dados, com
-        ênfase em Engenharia de Dados e Técnicas de IA. O blog foi desenvolvido desde o início utilizando tecnologias
+        ênfase em Engenharia de Dados, Automação e Técnicas de IA. O blog foi desenvolvido desde o início utilizando
+        tecnologias
         como Nuxt, Tailwind, PrimeVue, NestJS, MongoDB, NGINX, PM2, entre outras.
       </p>
     </div>

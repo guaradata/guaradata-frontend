@@ -56,9 +56,16 @@
             Ajuda
           </h2>
           <ul>
-            <li><a href="#" class="text-gray-200 hover:text-white">Privacidade</a></li>
-            <li><a href="#" class="text-gray-200 hover:text-white">Problemas no site</a></li>
-            <li><a href="#" class="text-gray-200 hover:text-white">Solicite ajuda</a></li>
+            <li>
+              <NuxtLink to="/privacy" class="text-gray-200 hover:text-white">
+                Privacidade
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/site-problems" class="text-gray-200 hover:text-white">
+                Problemas no site
+              </NuxtLink>
+            </li>
           </ul>
         </div>
       </div>

@@ -28,7 +28,7 @@
 <script setup>
 const items = ref([
   {
-    label: 'Home',
+    label: 'Visão geral',
     icon: 'pi pi-home',
     route: '/manage-content',
     aria: 'Home button'
