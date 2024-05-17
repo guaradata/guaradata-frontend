@@ -39,7 +39,7 @@
           </div>
           <div class=" skills-section">
             <h3 class="main-title">
-              Skills
+              Hard Skills
             </h3>
             <ul>
               <li>
@@ -92,10 +92,26 @@
               </li>
               <li>
                 <p class="skill-title">
-                  Node.js
+                  Vue.js
                 </p>
                 <div class="progress-bar">
-                  <div class="progress node-progress" />
+                  <div class="progress vue-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Nuxt.js
+                </p>
+                <div class="progress-bar">
+                  <div class="progress nuxt-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Nest.js
+                </p>
+                <div class="progress-bar">
+                  <div class="progress nest-progress" />
                 </div>
               </li>
               <li>
@@ -104,6 +120,85 @@
                 </p>
                 <div class="progress-bar">
                   <div class="progress gcp-progress" />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class=" skills-section">
+            <h3 class="main-title">
+              Soft Skills
+            </h3>
+            <ul>
+              <li>
+                <p class="skill-title">
+                  Comunicação
+                </p>
+                <div class="progress-bar">
+                  <div class="progress comunication-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Ética
+                </p>
+                <div class="progress-bar">
+                  <div class="progress ethics-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Trabalho Em Equipe
+                </p>
+                <div class="progress-bar">
+                  <div class="progress teamwork-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Flexibilidade E Resiliência
+                </p>
+                <div class="progress-bar">
+                  <div class="progress flexres-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Proatividade
+                </p>
+                <div class="progress-bar">
+                  <div class="progress proactivity-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Pensamento Crítico
+                </p>
+                <div class="progress-bar">
+                  <div class="progress thinking-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Organização
+                </p>
+                <div class="progress-bar">
+                  <div class="progress org-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Criatividade
+                </p>
+                <div class="progress-bar">
+                  <div class="progress creative-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
+                  Liderança
+                </p>
+                <div class="progress-bar">
+                  <div class="progress manager-progress" />
                 </div>
               </li>
             </ul>
@@ -488,27 +583,71 @@
 }
 
 .sql-progress {
-  width: 65%;
+  width: 60%;
 }
 
 .airflow-progress {
-  width: 45%;
+  width: 30%;
 }
 
 .mage-progress {
-  width: 65%;
+  width: 55%;
 }
 
 .docker-progress {
-  width: 73%;
-}
-
-.node-progress {
-  width: 83%;
+  width: 45%;
 }
 
 .gcp-progress {
-  width: 53%;
+  width: 40%;
+}
+
+.vue-progress {
+  width: 65%;
+}
+
+.nuxt-progress {
+  width: 45%;
+}
+
+.nest-progress {
+  width: 35%;
+}
+
+.comunication-progress {
+  width: 73%;
+}
+
+.ethics-progress {
+  width: 90%;
+}
+
+.teamwork-progress {
+  width: 92%;
+}
+
+.flexres-progress {
+  width: 75%;
+}
+
+.proactivity-progress {
+  width: 80%;
+}
+
+.thinking-progress {
+  width: 89%;
+}
+
+.org-progress {
+  width: 70%;
+}
+
+.creative-progress {
+  width: 65%;
+}
+
+.manager-progress {
+  width: 65%;
 }
 
 .skill-title {

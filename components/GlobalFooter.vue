@@ -21,7 +21,7 @@
           </div>
         </section>
       </div>
-      <div class="second-section flex flex-col justify-center w-full md:w-1/4">
+      <div class="flex flex-col justify-top w-full md:w-1/4 mt-12 footer-content">
         <div class="mb-4">
           <h2 class="text-white text-lg mb-4 font-bold">
             Projeto
@@ -50,7 +50,7 @@
           </ul>
         </div>
       </div>
-      <div class="flex flex-col justify-center w-full md:w-1/4">
+      <div class="flex flex-col justify-top w-full md:w-1/4 mt-12 footer-content">
         <div class="mb-4">
           <h2 class="text-white text-lg mb-4 font-bold">
             Ajuda
@@ -126,8 +126,8 @@
     text-align: center;
   }
 
-  .second-section {
-    margin-top: 2em;
+  .footer-content {
+    margin-top: 15px;
   }
 }
 </style>
