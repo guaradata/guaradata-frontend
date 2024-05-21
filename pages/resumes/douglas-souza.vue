@@ -133,6 +133,31 @@
             <div class="timeline">
               <div class="left-tl-content">
                 <h5 class="tl-title">
+                  ADN Construtora
+                </h5>
+                <p class="para">
+                  2022 - Até o momento
+                </p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">
+                    Analista de Inteligência de Dados
+                  </h5>
+                  <p class="para">
+                    Participação em discussões e análises estratégicas;
+                    Automação de processos (RPA) via Power Automate, como também python;
+                    Melhorias e contribuições nos outros setores;
+                    Criação de painéis via Power BI;
+                    Consulta a banco de dados via SQL;
+                    Análise e acompanhamento de OKR's.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">
                   Boost Your Business
                 </h5>
                 <p class="para">
@@ -145,9 +170,11 @@
                     Digital Analytics Intern
                   </h5>
                   <p class="para">
-                    Durante meu estágio na área de Tags e Rastreamento, tive a oportunidade de desenvolver soluções para
-                    coletar dados relevantes do Front-end de sites. Atuei na criação de Tags para captura e envio de
-                    informações para as Mídias de interesse.
+                    Gestão do Google Tag Manager;
+                    Tagueamento de Sites;
+                    Criação de painéis via Googgle Data Studio;
+                    Integrações: Analytics - Google Ads, DataStudio - Google Ads, Meta Ads, Linkedin Ads, Search Console, Universal Analytics, GA4, Big Query;
+                    Criação de site via Wordpress.
                   </p>
                 </div>
               </div>
