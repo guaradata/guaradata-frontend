@@ -28,11 +28,6 @@
           </h2>
           <ul>
             <li>
-              <NuxtLink to="/about" class="text-gray-200 hover:text-white">
-                Sobre o projeto
-              </NuxtLink>
-            </li>
-            <li>
               <NuxtLink to="/frontend-tech" class="text-gray-200 hover:text-white">
                 Tecnologias front-end
               </NuxtLink>
@@ -53,9 +48,14 @@
       <div class="flex flex-col justify-top w-full md:w-1/4 mt-12 footer-content">
         <div class="mb-4">
           <h2 class="text-white text-lg mb-4 font-bold">
-            Ajuda
+            Institucional
           </h2>
           <ul>
+            <li>
+              <NuxtLink to="/about" class="text-gray-200 hover:text-white">
+                Sobre o projeto
+              </NuxtLink>
+            </li>
             <li>
               <NuxtLink to="/privacy" class="text-gray-200 hover:text-white">
                 Privacidade

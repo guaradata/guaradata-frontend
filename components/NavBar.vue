@@ -4,7 +4,7 @@
       <template #start>
         <NuxtLink to="/">
           <div class="brand inline-block flex items-center justify-center p-0 ml-4">
-            <span><img class="w-14 mr-2" src="~/assets/img/logos/guaradata-logo-1.svg"></span>
+            <span><img class="w-14 mr-2" src="~/assets/img/logos/guaradata-logo-3.svg"></span>
             <!-- <h1 class="font-brand text-white font-bold text-2xl mt-0 p-0">
               guaradata
             </h1> -->

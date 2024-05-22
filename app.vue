@@ -44,7 +44,7 @@ useSeoMeta({
 
 .wrapper {
   flex: 1;
-  margin-top: 6.5em;
+  margin-top: 5em;
 }
 
 .footer {

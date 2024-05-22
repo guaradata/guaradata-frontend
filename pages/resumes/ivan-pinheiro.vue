@@ -68,6 +68,14 @@
               </li>
               <li>
                 <p class="skill-title">
+                  DATABRICKS
+                </p>
+                <div class="progress-bar">
+                  <div class="progress databricks-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
                   Airflow
                 </p>
                 <div class="progress-bar">
@@ -239,24 +247,77 @@
             <div class="timeline">
               <div class="left-tl-content">
                 <h5 class="tl-title">
-                  Boost Your Business
+                  Hagens
                 </h5>
                 <p class="para">
-                  08/2021 - 05/2022
+                  09/2023 - Atual
                 </p>
               </div>
               <div class="right-tl-content">
                 <div class="tl-content">
                   <h5 class="tl-title-2">
-                    Digital Analytics Intern
+                    Analytics Engineer
                   </h5>
                   <p class="para">
-                    Durante meu estágio na área de Tags e Rastreamento, tive a oportunidade de desenvolver soluções para
-                    coletar dados relevantes do Front-end de sites. Atuei na criação de Tags para captura e envio de
-                    informações para as Mídias de interesse. Além disso, realizei tarefas de manutenção em sites,
-                    landing pages e plataformas de E-commerce, utilizando ferramentas de Desenvolvimento Web. Também
-                    participei ativamente na estruturação de dados para a elaboração de painéis no Data Studio e Power
-                    BI, contribuindo assim para o Business Intelligence.
+                    Desempenho um papel central no suporte e na criação de soluções avançadas de inteligência de
+                    dados para clientes renomados, como Dux Nutrition, HM Engenharia e BR Mania. Meu foco está na
+                    concepção e manutenção das pipelines de dados para clientes notáveis, como Águia Branca, Uniodonto e
+                    Hospital Vera Cruz, que alimentam diversos modelos e painéis de análise.
+                    O aplicativo foi projetado para agilizar o processo de integração de dados entre plataformas de
+                    mídia e análise junto com bancos de dados SQL e noSQL. Esta funcionalidade é fundamental para
+                    fornecer acesso simplificado aos dados gerados por campanhas pagas e orgânicas para todos os
+                    departamentos da Hagens.
+                    No contexto de ETL, desenvolvi fluxos em JavaScript no Google Apps Script, incluindo leituras de
+                    APIs REST e a transformação da resposta em um formato adequado para a escrita em tabelas. Utilizei
+                    técnicas de Engenharia de Software para garantir eficiência, estabilidade e manutenção facilitada.
+                    Também criei soluções no Airflow com Python, desenvolvendo Hooks e Operadores específicos para a
+                    carga de dados para alimentar painéis;
+                    Em relação às bases de dados, construí consultas SQL em bases de dados, especificamente no BigQuery
+                    e Postgres. Utilizei ferramentas como Window Functions e Modelos Multidimensionais, além de
+                    trabalhar com dados não atômicos, a fim de criar tabelas de visualização para o uso dos analistas de
+                    dados e para fins de análise de desempenho.
+                    Adicionalmente, contribui para o desenvolvimento de modelos, incluindo a criação de modelos LTV
+                    (Lifetime Value) e CAC (Customer Acquisition Cost), utilizando ferramentas e bibliotecas de ciência
+                    de dados como Pandas, Numpy, Matplotlib e Seaborn.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">
+                  Hagens
+                </h5>
+                <p class="para">
+                  10/2022 - 09/2023
+                </p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">
+                    Digital Analytics Sr.
+                  </h5>
+                  <p class="para">
+                    Integrante do time técnico da Ânima Educação, contribuindo ativamente para o desenvolvimento e
+                    otimização das soluções de Martech da empresa;
+                    Responsável pelo desenvolvimento e implantação de tags para monitorar o comportamento dos usuários
+                    nos sites das 19 marcas da Ânima, frequentados por mais de 3 milhões de pessoas mensalmente. O
+                    objetivo é fornecer insights cruciais para tomadas de decisão (product analytics) e aprimorar as
+                    estratégias de remarketing (marketing analytics / ad tech);
+                    Encarregado da instalação e manutenção de tags para diversos fornecedores, incluindo Google
+                    Analytics, Google Ads, Facebook, Criteo, TikTok, Twitter Ads, Microsoft Ads, Clarity, entre outros;
+                    Desenvolvimento de tags de rastreamento avançadas para capturar comportamentos específicos dos
+                    usuários;
+                    Elaboração e execução de planos de migração do Google Analytics Universal para o GA4;
+                    Criação de planos de tracking e data layer utilizando Miro e Google Documents, a fim de auxiliar
+                    as equipes de produto da empresa na tomada de decisões;
+                    Experiência prática com metodologias ágeis, contribuindo para a eficiência e adaptabilidade do
+                    processo de desenvolvimento;
+                    Mentoria de novos membros da equipe, compartilhando conhecimento e promovendo o crescimento
+                    profissional;
+                    Principais tecnologias e ferramentas utilizadas: JavaScript, Google Tag Manager, Google Analytics
+                    (UA/GA4), Firebase Analytics, Vue.js, Google Apps Script, Chrome Dev Tools, Google Cloud Platform e
+                    BigQuery.
                   </p>
                 </div>
               </div>
@@ -289,77 +350,24 @@
             <div class="timeline">
               <div class="left-tl-content">
                 <h5 class="tl-title">
-                  Hagens
+                  Boost Your Business
                 </h5>
                 <p class="para">
-                  10/2022 - 09/2023
+                  08/2021 - 05/2022
                 </p>
               </div>
               <div class="right-tl-content">
                 <div class="tl-content">
                   <h5 class="tl-title-2">
-                    Digital Analytics Sr.
+                    Digital Analytics Intern
                   </h5>
                   <p class="para">
-                    • Integrante do time técnico da Ânima Educação, contribuindo ativamente para o desenvolvimento e
-                    otimização das soluções de Martech da empresa;
-                    • Responsável pelo desenvolvimento e implantação de tags para monitorar o comportamento dos usuários
-                    nos sites das 19 marcas da Ânima, frequentados por mais de 3 milhões de pessoas mensalmente. O
-                    objetivo é fornecer insights cruciais para tomadas de decisão (product analytics) e aprimorar as
-                    estratégias de remarketing (marketing analytics / ad tech);
-                    • Encarregado da instalação e manutenção de tags para diversos fornecedores, incluindo Google
-                    Analytics, Google Ads, Facebook, Criteo, TikTok, Twitter Ads, Microsoft Ads, Clarity, entre outros;
-                    • Desenvolvimento de tags de rastreamento avançadas para capturar comportamentos específicos dos
-                    usuários;
-                    • Elaboração e execução de planos de migração do Google Analytics Universal para o GA4;
-                    • Criação de planos de tracking e data layer utilizando Miro e Google Documents, a fim de auxiliar
-                    as equipes de produto da empresa na tomada de decisões;
-                    • Experiência prática com metodologias ágeis, contribuindo para a eficiência e adaptabilidade do
-                    processo de desenvolvimento;
-                    • Mentoria de novos membros da equipe, compartilhando conhecimento e promovendo o crescimento
-                    profissional;
-                    • Principais tecnologias e ferramentas utilizadas: JavaScript, Google Tag Manager, Google Analytics
-                    (UA/GA4), Firebase Analytics, Vue.js, Google Apps Script, Chrome Dev Tools, Google Cloud Platform e
-                    BigQuery.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="timeline">
-              <div class="left-tl-content">
-                <h5 class="tl-title">
-                  Hagens
-                </h5>
-                <p class="para">
-                  09/2023 - Atual
-                </p>
-              </div>
-              <div class="right-tl-content">
-                <div class="tl-content">
-                  <h5 class="tl-title-2">
-                    Analytics Engineer Jr.
-                  </h5>
-                  <p class="para">
-                    Desempenho um papel central no suporte e na criação de soluções avançadas de inteligência de
-                    dados para clientes renomados, como Dux Nutrition, HM Engenharia e BR Mania. Meu foco está na
-                    concepção e manutenção das pipelines de dados para clientes notáveis, como Águia Branca, Uniodonto e
-                    Hospital Vera Cruz, que alimentam diversos modelos e painéis de análise.
-                    O aplicativo foi projetado para agilizar o processo de integração de dados entre plataformas de
-                    mídia e análise junto com bancos de dados SQL e noSQL. Esta funcionalidade é fundamental para
-                    fornecer acesso simplificado aos dados gerados por campanhas pagas e orgânicas para todos os
-                    departamentos da Hagens.
-                    No contexto de ETL, desenvolvi fluxos em JavaScript no Google Apps Script, incluindo leituras de
-                    APIs REST e a transformação da resposta em um formato adequado para a escrita em tabelas. Utilizei
-                    técnicas de Engenharia de Software para garantir eficiência, estabilidade e manutenção facilitada.
-                    Também criei soluções no Airflow com Python, desenvolvendo Hooks e Operadores específicos para a
-                    carga de dados para alimentar painéis;
-                    Em relação às bases de dados, construí consultas SQL em bases de dados, especificamente no BigQuery
-                    e Postgres. Utilizei ferramentas como Window Functions e Modelos Multidimensionais, além de
-                    trabalhar com dados não atômicos, a fim de criar tabelas de visualização para o uso dos analistas de
-                    dados e para fins de análise de desempenho.
-                    Adicionalmente, contribui para o desenvolvimento de modelos, incluindo a criação de modelos LTV
-                    (Lifetime Value) e CAC (Customer Acquisition Cost), utilizando ferramentas e bibliotecas de ciência
-                    de dados como Pandas, Numpy, Matplotlib e Seaborn.
+                    Durante meu estágio na área de Tags e Rastreamento, tive a oportunidade de desenvolver soluções para
+                    coletar dados relevantes do Front-end de sites. Atuei na criação de Tags para captura e envio de
+                    informações para as Mídias de interesse. Além disso, realizei tarefas de manutenção em sites,
+                    landing pages e plataformas de E-commerce, utilizando ferramentas de Desenvolvimento Web. Também
+                    participei ativamente na estruturação de dados para a elaboração de painéis no Data Studio e Power
+                    BI, contribuindo assim para o Business Intelligence.
                   </p>
                 </div>
               </div>
@@ -369,26 +377,6 @@
             <h2 class="right-title">
               Educação
             </h2>
-            <div class="timeline">
-              <div class="left-tl-content">
-                <h5 class="tl-title">
-                  Universidade de São Paulo (USP)
-                </h5>
-                <p class="para">
-                  2014 - 2019
-                </p>
-              </div>
-              <div class="right-tl-content">
-                <div class="tl-content">
-                  <h5 class="tl-title-2">
-                    Instituto de Química de São Carlos (IQSC)
-                  </h5>
-                  <p class="para">
-                    Bacharel em química com ênfase em química dos alimentos.
-                  </p>
-                </div>
-              </div>
-            </div>
             <div class="timeline">
               <div class="left-tl-content">
                 <h5 class="tl-title">
@@ -405,6 +393,26 @@
                   </h5>
                   <p class="para">
                     Estudante de Sistema de Informação com ênfase em Ciência de Dados.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">
+                  Universidade de São Paulo (USP)
+                </h5>
+                <p class="para">
+                  2014 - 2019
+                </p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">
+                    Instituto de Química de São Carlos (IQSC)
+                  </h5>
+                  <p class="para">
+                    Bacharel em química com ênfase em química dos alimentos.
                   </p>
                 </div>
               </div>
@@ -458,7 +466,7 @@
 .main-content {
   min-height: 100vh;
   width: 80%;
-  margin: 1rem auto;
+  margin: 0rem auto;
   margin-bottom: 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -584,6 +592,10 @@
 
 .sql-progress {
   width: 60%;
+}
+
+.databricks-progress {
+  width: 40%;
 }
 
 .airflow-progress {

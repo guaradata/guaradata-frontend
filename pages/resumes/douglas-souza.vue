@@ -64,42 +64,18 @@
               </li>
               <li>
                 <p class="skill-title">
+                  PowerBI
+                </p>
+                <div class="progress-bar">
+                  <div class="progress power-progress" />
+                </div>
+              </li>
+              <li>
+                <p class="skill-title">
                   Airflow
                 </p>
                 <div class="progress-bar">
                   <div class="progress airflow-progress" />
-                </div>
-              </li>
-              <li>
-                <p class="skill-title">
-                  Mage.IA
-                </p>
-                <div class="progress-bar">
-                  <div class="progress mage-progress" />
-                </div>
-              </li>
-              <li>
-                <p class="skill-title">
-                  Docker
-                </p>
-                <div class="progress-bar">
-                  <div class="progress docker-progress" />
-                </div>
-              </li>
-              <li>
-                <p class="skill-title">
-                  Node.js
-                </p>
-                <div class="progress-bar">
-                  <div class="progress node-progress" />
-                </div>
-              </li>
-              <li>
-                <p class="skill-title">
-                  Google Cloud
-                </p>
-                <div class="progress-bar">
-                  <div class="progress gcp-progress" />
                 </div>
               </li>
             </ul>
@@ -173,28 +149,34 @@
                     Gestão do Google Tag Manager;
                     Tagueamento de Sites;
                     Criação de painéis via Googgle Data Studio;
-                    Integrações: Analytics - Google Ads, DataStudio - Google Ads, Meta Ads, Linkedin Ads, Search Console, Universal Analytics, GA4, Big Query;
+                    Integrações: Analytics - Google Ads, DataStudio - Google Ads, Meta Ads, Linkedin Ads, Search
+                    Console, Universal Analytics, GA4, Big Query;
                     Criação de site via Wordpress.
                   </p>
                 </div>
               </div>
             </div>
+          </section>
+          <section class="education sect">
+            <h2 class="right-title">
+              Educação
+            </h2>
             <div class="timeline">
               <div class="left-tl-content">
                 <h5 class="tl-title">
-                  Universidade de São Paulo
+                  Universidade de São Paulo (USP)
                 </h5>
                 <p class="para">
-                  2021 - Atual
+                  2018 - 2023
                 </p>
               </div>
               <div class="right-tl-content">
                 <div class="tl-content">
                   <h5 class="tl-title-2">
-                    Instituto De Ciências Matemáticas e de Computação
+                    Instituto De Ciências Matemáticas e de Computação (ICMC)
                   </h5>
                   <p class="para">
-                    Bacharelado em Estatística e Ciência de Dados.
+                    Bacharel em Estatística e Ciência de Dados.
                   </p>
                 </div>
               </div>
@@ -213,7 +195,7 @@
 .main-content {
   min-height: 100vh;
   width: 80%;
-  margin: 1rem auto;
+  margin: 0rem auto;
   margin-bottom: 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -333,32 +315,20 @@
   width: 80%;
 }
 
-.js-progress {
-  width: 90%;
-}
-
 .sql-progress {
   width: 65%;
 }
 
+.power-progress {
+  width: 95%;
+}
+
+.js-progress {
+  width: 75%;
+}
+
 .airflow-progress {
-  width: 45%;
-}
-
-.mage-progress {
-  width: 65%;
-}
-
-.docker-progress {
-  width: 73%;
-}
-
-.node-progress {
-  width: 83%;
-}
-
-.gcp-progress {
-  width: 53%;
+  width: 40%;
 }
 
 .skill-title {
