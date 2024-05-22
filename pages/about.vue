@@ -5,10 +5,10 @@
         Guara<span class="font-brand-highlight">data</span>
       </h1>
       <p class="font-bold text-lg pl-12 pr-12">
-        Guaradata é um blog idealizado em dezembro de 2023, dedicado a compartilhar conteúdo sobre a área de dados, com
-        ênfase em Engenharia de Dados, Automação e Técnicas de IA. O blog foi desenvolvido desde o início utilizando
-        tecnologias
-        como Nuxt, Tailwind, PrimeVue, NestJS, MongoDB, NGINX, PM2, entre outras.
+        Guaradata é um blog dedicado a compartilhar conteúdos sobre diversas áreas do universo dos dados. Nosso foco
+        inclui Engenharia de Dados, Ciência de Dados e Análise de Dados, além de explorar temas relacionados à
+        automação, como RPA assistida e não assistida. O blog foi desenvolvido do zero utilizando uma variedade de
+        tecnologias modernas, incluindo Nuxt, Tailwind, PrimeVue, NestJS, MongoDB, NGINX e PM2, entre outras.
       </p>
     </div>
     <div class="m-4 flex justify-center">
