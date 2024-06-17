@@ -39,7 +39,6 @@
     "nuxt-primevue": "^0.3.1",
     "playwright-core": "^1.44.1",
     "sass": "^1.72.0",
-    "typescript": "^5.4.5",
     "vite": "^5.3.1",
     "vitest": "^1.6.0"
   }
