@@ -7,13 +7,17 @@
         </div>
       </template>
       <template #title>
-        {{ props.blogContent.title }}
+        <div class="title">
+          {{ props.blogContent.title }}
+        </div>
       </template>
       <template #subtitle>
-        {{ props.blogContent.author }}
+        <div class="author">
+          {{ props.blogContent.author }}
+        </div>
       </template>
       <template #content>
-        <p class="m-0">
+        <p class="m-0 summary">
           {{ props.blogContent.contentSummary }}
         </p>
       </template>
@@ -41,6 +45,15 @@ const props = defineProps({
 // ['_id', 'title', 'author', 'content', 'publicationDate', 'updatedAt', 'category', 'keywords', 'coverImage', 'tags', 'language']
 </script>
 <style lang="scss" scoped>
+.title,
+.summary {
+  color: white;
+}
+
+.author {
+  color: rgb(202, 192, 192);
+}
+
 .container-img {
   height: 300px;
   overflow: hidden;
