@@ -10,7 +10,9 @@
         {{ props.name }}
       </template>
       <template #subtitle>
-        {{ props.subtitle }}
+        <div class="subtitle">
+          {{ props.subtitle }}
+        </div>
       </template>
       <template #content>
         <p class="m-0">
@@ -49,6 +51,7 @@ const props = defineProps(['name', 'img_url', 'url_profile', 'subtitle', 'github
 .card {
   width: 30em;
   height: 30em;
+  color: white;
 }
 
 @media (max-width: 550px) {
@@ -72,6 +75,10 @@ const props = defineProps(['name', 'img_url', 'url_profile', 'subtitle', 'github
     width: 10em;
     height: auto;
   }
+}
+
+.subtitle {
+  color: rgb(159, 157, 157);
 }
 
 .rotate-icon {

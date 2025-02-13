@@ -66,11 +66,12 @@ const props = defineProps({
 }
 
 .card {
-  width: 25em;
+  width: 30em;
 }
 
 .btn-go-blog {
-  border: solid 2px;
+  border: solid 5px;
+  color: white;
 }
 
 .btn-go-blog:hover {
