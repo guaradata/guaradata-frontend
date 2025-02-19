@@ -1,11 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   runtimeConfig: {
     public: {
       NUXT_API_URL: process.env.NUXT_API_URL,
     },
   },
+
   content: {
     watch: {
       ws: {
@@ -14,6 +16,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   app: {
     // head: {
     //   link: [
@@ -31,6 +34,7 @@ export default defineNuxtConfig({
     //   ],
     // },
   },
+
   build: {
     transpile: [
       "@fortawesome/fontawesome-svg-core",
@@ -40,6 +44,7 @@ export default defineNuxtConfig({
       "@fortawesome/vue-fontawesome",
     ],
   },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-primevue",
@@ -48,6 +53,7 @@ export default defineNuxtConfig({
     "@nuxtjs/mdc",
     "@nuxt/test-utils/module",
   ],
+
   mdc: {
     highlight: {
       theme: "github-dark",
@@ -55,6 +61,7 @@ export default defineNuxtConfig({
       wrapperStyle: true,
     },
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -64,6 +71,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   primevue: {
     // cssLayerOrder: 'reset,primevue',
     // cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities',
@@ -74,6 +82,7 @@ export default defineNuxtConfig({
       inputStyle: "filled",
     },
   },
+
   css: [
     "quill/dist/quill.snow.css",
     "quill/dist/quill.bubble.css",
@@ -84,6 +93,7 @@ export default defineNuxtConfig({
     "~/assets/scss/main.scss",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
+
   tailwindcss: {
     config: {
       content: ["presets/**/*.{js,vue,ts}"],
@@ -118,4 +128,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: "2025-02-19",
 });
